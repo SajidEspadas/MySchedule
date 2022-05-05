@@ -1,0 +1,10 @@
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.exe.config
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.exe
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.pdb
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.MySchedule_Login.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.Properties.Resources.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.GenerateResource.cache
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.exe
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.pdb
