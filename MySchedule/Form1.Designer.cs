@@ -35,6 +35,7 @@ namespace MySchedule
             this.txtContra = new System.Windows.Forms.TextBox();
             this.cmdAceptar = new System.Windows.Forms.Button();
             this.PboxMyScheduleLogo = new System.Windows.Forms.PictureBox();
+            this.cmdRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PboxMyScheduleLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@ namespace MySchedule
             // 
             this.txtID.Location = new System.Drawing.Point(334, 403);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 22);
+            this.txtID.Size = new System.Drawing.Size(158, 22);
             this.txtID.TabIndex = 1;
             // 
             // lblContra
@@ -70,7 +71,7 @@ namespace MySchedule
             // 
             this.txtContra.Location = new System.Drawing.Point(334, 445);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(100, 22);
+            this.txtContra.Size = new System.Drawing.Size(158, 22);
             this.txtContra.TabIndex = 3;
             // 
             // cmdAceptar
@@ -92,12 +93,22 @@ namespace MySchedule
             this.PboxMyScheduleLogo.TabIndex = 5;
             this.PboxMyScheduleLogo.TabStop = false;
             // 
+            // cmdRegister
+            // 
+            this.cmdRegister.Location = new System.Drawing.Point(549, 605);
+            this.cmdRegister.Name = "cmdRegister";
+            this.cmdRegister.Size = new System.Drawing.Size(119, 26);
+            this.cmdRegister.TabIndex = 6;
+            this.cmdRegister.Text = "Registrar";
+            this.cmdRegister.UseVisualStyleBackColor = true;
+            // 
             // MySchedule_Login
             // 
             this.AcceptButton = this.cmdAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 643);
+            this.Controls.Add(this.cmdRegister);
             this.Controls.Add(this.PboxMyScheduleLogo);
             this.Controls.Add(this.cmdAceptar);
             this.Controls.Add(this.txtContra);
@@ -120,6 +131,7 @@ namespace MySchedule
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Button cmdAceptar;
         private System.Windows.Forms.PictureBox PboxMyScheduleLogo;
+        private System.Windows.Forms.Button cmdRegister;
     }
 }
 
