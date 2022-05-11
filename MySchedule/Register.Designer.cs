@@ -39,6 +39,7 @@ namespace MySchedule
             this.lblContraseña = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PboxMyScheduleLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,12 +126,24 @@ namespace MySchedule
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cmdCancelar.Location = new System.Drawing.Point(507, 626);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(129, 28);
+            this.cmdCancelar.TabIndex = 16;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = true;
+            // 
             // Register
             // 
             this.AcceptButton = this.cmdRegistrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cmdCancelar;
             this.ClientSize = new System.Drawing.Size(648, 666);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.lblContraseña);
@@ -142,7 +155,7 @@ namespace MySchedule
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.PboxMyScheduleLogo);
             this.Name = "Register";
-            this.Text = "MySchedule - Register";
+            this.Text = "MySchedule - Registrar";
             ((System.ComponentModel.ISupportInitialize)(this.PboxMyScheduleLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,5 +174,6 @@ namespace MySchedule
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button cmdRegistrar;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

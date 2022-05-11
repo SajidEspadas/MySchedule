@@ -8,3 +8,4 @@ C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.Ge
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.exe
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.pdb
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.Register.resources

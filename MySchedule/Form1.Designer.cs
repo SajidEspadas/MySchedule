@@ -33,9 +33,9 @@ namespace MySchedule
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblContra = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
-            this.cmdAceptar = new System.Windows.Forms.Button();
+            this.cmdIniciarSesion = new System.Windows.Forms.Button();
             this.PboxMyScheduleLogo = new System.Windows.Forms.PictureBox();
-            this.cmdRegister = new System.Windows.Forms.Button();
+            this.cmdRegistrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PboxMyScheduleLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,14 +74,14 @@ namespace MySchedule
             this.txtContra.Size = new System.Drawing.Size(158, 22);
             this.txtContra.TabIndex = 3;
             // 
-            // cmdAceptar
+            // cmdIniciarSesion
             // 
-            this.cmdAceptar.Location = new System.Drawing.Point(261, 485);
-            this.cmdAceptar.Name = "cmdAceptar";
-            this.cmdAceptar.Size = new System.Drawing.Size(119, 26);
-            this.cmdAceptar.TabIndex = 4;
-            this.cmdAceptar.Text = "Iniciar Sesión";
-            this.cmdAceptar.UseVisualStyleBackColor = true;
+            this.cmdIniciarSesion.Location = new System.Drawing.Point(261, 485);
+            this.cmdIniciarSesion.Name = "cmdIniciarSesion";
+            this.cmdIniciarSesion.Size = new System.Drawing.Size(119, 26);
+            this.cmdIniciarSesion.TabIndex = 4;
+            this.cmdIniciarSesion.Text = "Iniciar Sesión";
+            this.cmdIniciarSesion.UseVisualStyleBackColor = true;
             // 
             // PboxMyScheduleLogo
             // 
@@ -93,30 +93,31 @@ namespace MySchedule
             this.PboxMyScheduleLogo.TabIndex = 5;
             this.PboxMyScheduleLogo.TabStop = false;
             // 
-            // cmdRegister
+            // cmdRegistrar
             // 
-            this.cmdRegister.Location = new System.Drawing.Point(549, 605);
-            this.cmdRegister.Name = "cmdRegister";
-            this.cmdRegister.Size = new System.Drawing.Size(119, 26);
-            this.cmdRegister.TabIndex = 6;
-            this.cmdRegister.Text = "Registrar";
-            this.cmdRegister.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Location = new System.Drawing.Point(549, 605);
+            this.cmdRegistrar.Name = "cmdRegistrar";
+            this.cmdRegistrar.Size = new System.Drawing.Size(119, 26);
+            this.cmdRegistrar.TabIndex = 6;
+            this.cmdRegistrar.Text = "Registrar";
+            this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
             // 
             // MySchedule_Login
             // 
-            this.AcceptButton = this.cmdAceptar;
+            this.AcceptButton = this.cmdIniciarSesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 643);
-            this.Controls.Add(this.cmdRegister);
+            this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.PboxMyScheduleLogo);
-            this.Controls.Add(this.cmdAceptar);
+            this.Controls.Add(this.cmdIniciarSesion);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.lblContra);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.Name = "MySchedule_Login";
-            this.Text = "MySchedule - Login";
+            this.Text = "MySchedule - Iniciar Sesión";
             ((System.ComponentModel.ISupportInitialize)(this.PboxMyScheduleLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,9 +130,9 @@ namespace MySchedule
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblContra;
         private System.Windows.Forms.TextBox txtContra;
-        private System.Windows.Forms.Button cmdAceptar;
+        private System.Windows.Forms.Button cmdIniciarSesion;
         private System.Windows.Forms.PictureBox PboxMyScheduleLogo;
-        private System.Windows.Forms.Button cmdRegister;
+        private System.Windows.Forms.Button cmdRegistrar;
     }
 }
 

@@ -15,6 +15,27 @@ namespace MySchedule
         public MySchedule_Login()
         {
             InitializeComponent();
+
         }
+
+        // || ============================================================================= || //
+
+        // ===== [ INICIO MÉTODOS ] ===== //
+
+        // ===== [ FIN MÉTODOS ] ===== //
+
+        // || ============================================================================= || //
+
+        // ===== [ INICIO EVENTOS ] ===== //
+
+        // [Evento para ] //
+        private void cmdRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // ===== [ FIN EVENTOS ] ===== //
+
+        // || ============================================================================= || //
     }
 }
