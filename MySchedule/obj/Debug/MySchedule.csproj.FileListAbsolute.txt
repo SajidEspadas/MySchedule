@@ -2,10 +2,10 @@ C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.exe.confi
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.exe
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.pdb
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.MySchedule_Login.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.Properties.Resources.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.GenerateResource.cache
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.exe
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.pdb
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.Register.resources
+C:\Users\ADMIN\source\repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmRegistrar.resources
+C:\Users\ADMIN\source\repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmIniciarSesion.resources

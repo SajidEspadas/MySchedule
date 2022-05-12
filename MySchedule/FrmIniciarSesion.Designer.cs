@@ -1,7 +1,7 @@
 ﻿
 namespace MySchedule
 {
-    partial class MySchedule_Login
+    partial class FrmIniciarSesion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace MySchedule
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIniciarSesion));
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblContra = new System.Windows.Forms.Label();
@@ -36,7 +37,11 @@ namespace MySchedule
             this.cmdIniciarSesion = new System.Windows.Forms.Button();
             this.PboxMyScheduleLogo = new System.Windows.Forms.PictureBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
+            this.pboxCerrar = new System.Windows.Forms.PictureBox();
+            this.pboxMinimizar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PboxMyScheduleLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -85,7 +90,8 @@ namespace MySchedule
             // 
             // PboxMyScheduleLogo
             // 
-            this.PboxMyScheduleLogo.ImageLocation = "https://www.tijuana.tecnm.mx/wp-content/uploads/2015/01/logo_ITT.png";
+            this.PboxMyScheduleLogo.Image = ((System.Drawing.Image)(resources.GetObject("PboxMyScheduleLogo.Image")));
+            this.PboxMyScheduleLogo.ImageLocation = "";
             this.PboxMyScheduleLogo.Location = new System.Drawing.Point(157, 93);
             this.PboxMyScheduleLogo.Name = "PboxMyScheduleLogo";
             this.PboxMyScheduleLogo.Size = new System.Drawing.Size(364, 285);
@@ -103,12 +109,38 @@ namespace MySchedule
             this.cmdRegistrar.UseVisualStyleBackColor = true;
             this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
             // 
-            // MySchedule_Login
+            // pboxCerrar
+            // 
+            this.pboxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pboxCerrar.Image")));
+            this.pboxCerrar.Location = new System.Drawing.Point(638, 12);
+            this.pboxCerrar.Name = "pboxCerrar";
+            this.pboxCerrar.Size = new System.Drawing.Size(30, 30);
+            this.pboxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxCerrar.TabIndex = 18;
+            this.pboxCerrar.TabStop = false;
+            this.pboxCerrar.Click += new System.EventHandler(this.pboxCerrar_Click);
+            // 
+            // pboxMinimizar
+            // 
+            this.pboxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pboxMinimizar.Image")));
+            this.pboxMinimizar.Location = new System.Drawing.Point(602, 12);
+            this.pboxMinimizar.Name = "pboxMinimizar";
+            this.pboxMinimizar.Size = new System.Drawing.Size(30, 30);
+            this.pboxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxMinimizar.TabIndex = 20;
+            this.pboxMinimizar.TabStop = false;
+            this.pboxMinimizar.Click += new System.EventHandler(this.pboxMinimizar_Click);
+            // 
+            // FrmIniciarSesion
             // 
             this.AcceptButton = this.cmdIniciarSesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 643);
+            this.Controls.Add(this.pboxMinimizar);
+            this.Controls.Add(this.pboxCerrar);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.PboxMyScheduleLogo);
             this.Controls.Add(this.cmdIniciarSesion);
@@ -116,9 +148,13 @@ namespace MySchedule
             this.Controls.Add(this.lblContra);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
-            this.Name = "MySchedule_Login";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmIniciarSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MySchedule - Iniciar Sesión";
             ((System.ComponentModel.ISupportInitialize)(this.PboxMyScheduleLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +169,8 @@ namespace MySchedule
         private System.Windows.Forms.Button cmdIniciarSesion;
         private System.Windows.Forms.PictureBox PboxMyScheduleLogo;
         private System.Windows.Forms.Button cmdRegistrar;
+        private System.Windows.Forms.PictureBox pboxCerrar;
+        private System.Windows.Forms.PictureBox pboxMinimizar;
     }
 }
 

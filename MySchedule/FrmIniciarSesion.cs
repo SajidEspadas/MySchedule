@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MySchedule
 {
-    public partial class MySchedule_Login : Form
+    public partial class FrmIniciarSesion : Form
     {
-        public MySchedule_Login()
+        public FrmIniciarSesion()
         {
             InitializeComponent();
 
@@ -28,10 +28,29 @@ namespace MySchedule
 
         // ===== [ INICIO EVENTOS ] ===== //
 
-        // [Evento para ] //
+        // Evento para invocar forma [Registro]
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
+            // Ocultamos la forma actual.
+            this.Hide();
 
+            // Generamos una nueva instancia de la forma [FrmRegistrar]
+            FrmRegistrar FormRegistrar = new FrmRegistrar();
+
+            // Mostramos la forma [FrmRegistrar]
+            FormRegistrar.Show();
+        }
+
+        // Evento para cerrar la aplicación.
+        private void pboxCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Evento para minimizar la aplicación.
+        private void pboxMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
 
         // ===== [ FIN EVENTOS ] ===== //
