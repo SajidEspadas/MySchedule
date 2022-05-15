@@ -9,3 +9,14 @@ C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.exe
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.pdb
 C:\Users\ADMIN\source\repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmRegistrar.resources
 C:\Users\ADMIN\source\repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmIniciarSesion.resources
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\bin\Debug\MySchedule.exe.config
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\bin\Debug\MySchedule.exe
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\bin\Debug\MySchedule.pdb
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.csproj.AssemblyReference.cache
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.FrmIniciarSesion.resources
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.Properties.Resources.resources
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.FrmRegistrar.resources
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.csproj.GenerateResource.cache
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.exe
+C:\Users\Owner\Desktop\Calendario IS\MySchedule\obj\Debug\MySchedule.pdb

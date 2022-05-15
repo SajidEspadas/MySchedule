@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MySchedule"
   ],
+  "SelectedNode": "\\MySchedule\\FrmRegistrar.cs",
   "PreviewInSolutionExplorer": false
 }
