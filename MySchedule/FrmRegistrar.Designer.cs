@@ -38,7 +38,7 @@ namespace MySchedule
             this.lblCorreo = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.pboxCerrar = new System.Windows.Forms.PictureBox();
@@ -122,16 +122,15 @@ namespace MySchedule
             this.lblContraseña.TabIndex = 13;
             this.lblContraseña.Text = "Contraseña:";
             // 
-            // textBox4
+            // txtContraseña
             // 
-            this.textBox4.Location = new System.Drawing.Point(164, 492);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 22);
-            this.textBox4.TabIndex = 14;
+            this.txtContraseña.Location = new System.Drawing.Point(164, 492);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(185, 22);
+            this.txtContraseña.TabIndex = 14;
             // 
             // cmdRegistrar
             // 
-            this.cmdRegistrar.Enabled = false;
             this.cmdRegistrar.Location = new System.Drawing.Point(135, 536);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(129, 28);
@@ -242,7 +241,7 @@ namespace MySchedule
             this.Controls.Add(this.pboxCerrar);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdRegistrar);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.lblCorreo);
@@ -275,7 +274,7 @@ namespace MySchedule
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.PictureBox pboxCerrar;
