@@ -23,5 +23,17 @@ namespace MySchedule
             // Retornamos la conexión.
             return cn;
         }
+
+        public static SqlConnection DesconectarBD()
+        {
+            // Establecemos el nombre del servidor, la base de datos a utilizar y su seguridad.
+            SqlConnection cn = new SqlConnection(@"SERVER=LAPTOP-58M9B2VK\VENTAS;DATABASE=MySchedule_BD;Integrated security=true");
+
+            // Cerramos la conexión con la base de datos.
+            cn.Close();
+
+            // Retornamos la conexión.
+            return cn;
+        }
     }
 }

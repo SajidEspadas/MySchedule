@@ -30,10 +30,10 @@ namespace MySchedule
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIniciarSesion));
-            this.lblID = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.lblContra = new System.Windows.Forms.Label();
-            this.txtContra = new System.Windows.Forms.TextBox();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.cmdIniciarSesion = new System.Windows.Forms.Button();
             this.PboxMyScheduleLogo = new System.Windows.Forms.PictureBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
@@ -44,40 +44,40 @@ namespace MySchedule
             ((System.ComponentModel.ISupportInitialize)(this.pboxMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblID
+            // lblCorreo
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(80, 421);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(96, 17);
-            this.lblID.TabIndex = 0;
-            this.lblID.Text = "ID de usuario:";
-            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Location = new System.Drawing.Point(80, 421);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(55, 17);
+            this.lblCorreo.TabIndex = 0;
+            this.lblCorreo.Text = "Correo:";
+            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtID
+            // txtCorreo
             // 
-            this.txtID.Location = new System.Drawing.Point(209, 416);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(158, 22);
-            this.txtID.TabIndex = 1;
+            this.txtCorreo.Location = new System.Drawing.Point(209, 416);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(158, 22);
+            this.txtCorreo.TabIndex = 1;
             // 
-            // lblContra
+            // lblContraseña
             // 
-            this.lblContra.AutoSize = true;
-            this.lblContra.Location = new System.Drawing.Point(80, 463);
-            this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(85, 17);
-            this.lblContra.TabIndex = 2;
-            this.lblContra.Tag = "";
-            this.lblContra.Text = "Contraseña:";
-            this.lblContra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(80, 463);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(85, 17);
+            this.lblContraseña.TabIndex = 2;
+            this.lblContraseña.Tag = "";
+            this.lblContraseña.Text = "Contraseña:";
+            this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtContra
+            // txtContraseña
             // 
-            this.txtContra.Location = new System.Drawing.Point(209, 458);
-            this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(158, 22);
-            this.txtContra.TabIndex = 3;
+            this.txtContraseña.Location = new System.Drawing.Point(209, 458);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(158, 22);
+            this.txtContraseña.TabIndex = 3;
             // 
             // cmdIniciarSesion
             // 
@@ -87,6 +87,7 @@ namespace MySchedule
             this.cmdIniciarSesion.TabIndex = 4;
             this.cmdIniciarSesion.Text = "Iniciar Sesión";
             this.cmdIniciarSesion.UseVisualStyleBackColor = true;
+            this.cmdIniciarSesion.Click += new System.EventHandler(this.cmdIniciarSesion_Click);
             // 
             // PboxMyScheduleLogo
             // 
@@ -144,10 +145,10 @@ namespace MySchedule
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.PboxMyScheduleLogo);
             this.Controls.Add(this.cmdIniciarSesion);
-            this.Controls.Add(this.txtContra);
-            this.Controls.Add(this.lblContra);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.lblCorreo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmIniciarSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -162,10 +163,10 @@ namespace MySchedule
 
         #endregion
 
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label lblContra;
-        private System.Windows.Forms.TextBox txtContra;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button cmdIniciarSesion;
         private System.Windows.Forms.PictureBox PboxMyScheduleLogo;
         private System.Windows.Forms.Button cmdRegistrar;
