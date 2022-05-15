@@ -8,14 +8,19 @@ using System.Data.SqlClient; // Librería necesaria para la conexión a la base 
 
 namespace MySchedule
 {
+    // Creamos la clase [ConexiónBD].
     class ConexiónBD
     {
-        public static SqlConnection Conectar()
+        // Creamos el método [Conectar].
+        public static SqlConnection ConectarBD()
         {
+            // Establecemos el nombre del servidor, la base de datos a utilizar y su seguridad.
             SqlConnection cn = new SqlConnection(@"SERVER=LAPTOP-58M9B2VK\VENTAS;DATABASE=MySchedule_BD;Integrated security=true");
 
+            // Abrimos la conexión con la base de datos.
             cn.Open();
 
+            // Retornamos la conexión.
             return cn;
         }
     }

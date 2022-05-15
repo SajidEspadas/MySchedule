@@ -30,10 +30,7 @@ namespace MySchedule
         public string Usu_Correo { get; set; }
         public string Usu_Contraseña { get; set; }
 
-        // Constructor de la clase [Usuario].
-        public Usuario() { }
-
-        // Constructor sobrecargado para capturar los datos.
+        // Constructor para capturar los datos.
         public Usuario(string Nombre, string Apellido, string Correo, string Contraseña)
         {
             Usu_Nombre = Nombre;
