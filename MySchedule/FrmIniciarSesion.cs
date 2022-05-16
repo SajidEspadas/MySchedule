@@ -37,34 +37,31 @@ namespace MySchedule
             return false;
         }
 
-        // Método para validar las entradas de los datos.
-        private bool ValidarDatos()
-        {
-            // Generamos una nueva instancia de la clase [Usuario].
-            Usuario Usuario = new Usuario();
+        //// Método para validar las entradas de los datos.
+        //private bool ValidarDatos()
+        //{
+        //    // Verificamos los [Textbox].
+        //    if (txtCorreo.Text == "" || txtContraseña.Text == "")
+        //        return MensajeError("Datos ingresados", "Por favor llene todos los datos antes de registrase.", txtCorreo);
+        //    else if (VerificarExistenciaCorreo(txtCorreo))
+        //        return MensajeError("Correo","El correo ingresado no existe", txtCorreo);
 
-            // Verificamos los [Textbox].
-            if (txtCorreo.Text == "" || txtContraseña.Text == "")
-                return MensajeError("Datos ingresados", "Por favor llene todos los datos antes de registrase.", txtCorreo);
-            else if (VerificarExistenciaCorreo(txtCorreo))
-                return MensajeError("Correo","El correo ingresado no existe", txtCorreo);
-
-            return true;
-        }
+        //    return true;
+        //}
 
         // Método para verificar si el [Correo] ya existe.
-        private bool VerificarExistenciaCorreo(TextBox txtCorreo)
-        {
-            // Conectamos la base de datos.
-            ConexiónBD.ConectarBD();
+        //private bool VerificarExistenciaCorreo(TextBox txtCorreo)
+        //{
+        //    // Conectamos la base de datos.
+        //    ConexiónBD.ConectarBD();
 
-            
 
-            // Desconectamos la base de datos.
-            ConexiónBD.DesconectarBD();
 
-            return false;
-        }
+        //    // Desconectamos la base de datos.
+        //    ConexiónBD.DesconectarBD();
+
+        //    return false;
+        //}
 
         // ===== [ FIN MÉTODOS ] ===== //
 

@@ -19,5 +19,18 @@ namespace MySchedule
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmIniciarSesion());
         }
+
+        // Método para desplegar advertencia de error.
+        public static bool MensajeError(string Espacio, string Descripción)
+        {
+            // Establecemos el encabezado del [MessageBox].
+            string Título = "Hubo un error en " + Espacio;
+
+            // Mostramos [MessageBox].
+            MessageBox.Show(Descripción, Título);
+
+            // Retornamos valor [bool].
+            return false;
+        }
     }
 }

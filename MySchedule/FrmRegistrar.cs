@@ -22,22 +22,6 @@ namespace MySchedule
 
         // ===== [ INICIO MÉTODOS ] ===== //
 
-        // Método para desplegar advertencia de error.
-        private bool MensajeError(string Espacio, string Descripción, Control Elemento)
-        {
-            // Establecemos el encabezado del [MessageBox].
-            string Título = "Hubo un error en " + Espacio;
-
-            // Mostramos [MessageBox].
-            MessageBox.Show(Descripción, Título);
-
-            // Centramos el cursor en el espacio donde ocurrió el error.
-            Elemento.Focus();
-
-            // Retornamos valor [bool].
-            return false;
-        }
-
         // Método para reemplazar los acentos no aceptados.
         public static string ReemplazarAcentos(string txtCajaTexto)
         {
@@ -71,37 +55,34 @@ namespace MySchedule
         // Método para validar las entradas de los datos.
         private bool ValidarDatos()
         {
-            // Generamos una nueva instancia de la clase [Usuario].
-            Usuario Usuario = new Usuario();
-
             // Verificamos los [Textbox].
             if (txtNombre.Text == "" || txtApellido.Text == "" || txtCorreo.Text == "" || txtContraseña.Text == "")
-                return MensajeError("Datos ingresados", "Por favor llene todos los datos antes de registrase.", txtNombre);        
+                return Program.MensajeError("Datos ingresados", "Por favor llene todos los datos antes de registrase.");
             else if (VerificarFormatoCorreo(txtCorreo))
-                return MensajeError("Correo", "Por favor ingrese un formato válido", txtCorreo);
+                return Program.MensajeError("Correo", "Por favor ingrese un formato válido");
             else if (VerificarExistenciaCorreo(txtCorreo))
-                return MensajeError("Correo", "El correo que intenta registrar ya existe, por favor ingrese otro correo.", txtCorreo);
+                return Program.MensajeError("Correo", "El correo que intenta registrar ya existe, por favor ingrese otro correo.");
             else if (VerificarFormatoContraseña(txtContraseña))
-                return MensajeError("Contraseña", "Por favor ingrese una contraseña válida", txtContraseña);
+                return Program.MensajeError("Contraseña", "Por favor ingrese una contraseña válida");
 
             // Invocamos el método [VerificarLongitud].
             VerificarLongitud(txtNombre, txtApellido, txtCorreo, txtContraseña);
-            
+
             return true;
         }
 
         // Método para verificar la longitud de los textos ingresados.
-        public void VerificarLongitud(TextBox txtNombre, TextBox txtApellido, TextBox txtCorreo, TextBox txtContraseña)
+        private void VerificarLongitud(TextBox txtNombre, TextBox txtApellido, TextBox txtCorreo, TextBox txtContraseña)
         {
 
             if (txtNombre.TextLength > 29)
-                MensajeError("Nombre","El nombre no puede superar los 30 caracteres!", txtNombre);
+                Program.MensajeError("Nombre", "El nombre no puede superar los 30 caracteres!");
             else if (txtApellido.TextLength > 29)
-                MensajeError("Apellido","El Apellido no puede superar los 30 caracteres!", txtApellido);
+                Program.MensajeError("Apellido", "El Apellido no puede superar los 30 caracteres!");
             else if (txtCorreo.TextLength > 49)
-                MensajeError("Correo","El Correo no puede superar los 50 caracteres!", txtCorreo);
+                Program.MensajeError("Correo", "El Correo no puede superar los 50 caracteres!");
             else if (txtContraseña.TextLength > 19)
-                MensajeError("Contraseña","La contraseña no puede superar los 20 caracteres!", txtContraseña);
+                Program.MensajeError("Contraseña", "La contraseña no puede superar los 20 caracteres!");
         }
 
         // Método para verificar el formato de [Contraseña].
@@ -146,7 +127,7 @@ namespace MySchedule
         {
 
             // Desplegamos [MessageBox] para verificar si se desea continuar.
-            if(MessageBox.Show("¿Desea cancelar el registro?", "Cancelar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea cancelar el registro?", "Cancelar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Cerramos la forma [FrmRegistrar].
                 Close();
@@ -162,7 +143,7 @@ namespace MySchedule
         // Evento para cerrar la aplicación.
         private void pboxCerrar_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Seguro que desea cerrar la aplicación","Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("¿Seguro que desea cerrar la aplicación", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 // Cerramos la aplicación.
                 Application.Exit();
@@ -197,14 +178,30 @@ namespace MySchedule
         }
 
         // Evento para validar y registrar al usuario.
-        private void cmdRegistrar_Click(object sender, EventArgs e)
+        public void cmdRegistrar_Click(object sender, EventArgs e)
         {
             // Verificamos que los términos y condiciones estén marcadas
-            if(cboxTermYCond.Checked == false)
-                    MensajeError("Términos y condiciones", "Se deben aceptar los términos y condiciones antes de registrarse!", cboxTermYCond);
-            
+            if (cboxTermYCond.Checked == false)
+                Program.MensajeError("Términos y condiciones", "Se deben aceptar los términos y condiciones antes de registrarse!");
 
+            // Invocamos el método [ValidarDatos].
             ValidarDatos();
+
+            // Creamos una instancia de la clase [ConexiónBD].
+            ConexiónBD NuevaConexión = new ConexiónBD();
+
+            // Invocamos método [ConectarBD].
+            NuevaConexión.ConectarBD();
+
+            // Generamos una nueva instancia de la clase [Usuario].
+            Usuario NuevoUsuario = new Usuario(txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtContraseña.Text);
+
+            // Invocamos al método [InsertarUsuario].
+            if (ConexiónBD.InsertarUsuario(NuevoUsuario) == 0)
+                Program.MensajeError("Inserción de los datos", "Ocurrió un error en los datos insertados");
+            else MessageBox.Show("Los datos se han registrado correctamente!", "Registro completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            NuevaConexión.DesconectarBD();
         }
 
         // ===== [ FIN EVENTOS ] ===== //

@@ -15,9 +15,6 @@ namespace MySchedule
         public string Usu_Correo { get; set; }
         public string Usu_Contraseña { get; set; }
 
-        // Constructor básico.
-        public Usuario() { }
-
         // Constructor para capturar los datos.
         public Usuario(string Nombre, string Apellido, string Correo, string Contraseña)
         {
