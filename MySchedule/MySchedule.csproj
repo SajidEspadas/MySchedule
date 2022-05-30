@@ -46,24 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calendario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Calendario.Designer.cs">
-      <DependentUpon>Calendario.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConexiónBD.cs" />
+    <Compile Include="ControlUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlUsuario.Designer.cs">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlUsuarioDias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlUsuarioDias.Designer.cs">
+      <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Datos_Usuario.Designer.cs">
       <DependentUpon>Datos_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalendario.Designer.cs">
+      <DependentUpon>FrmCalendario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmIniciarSesion.Designer.cs">
       <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecordatorio.Designer.cs">
+      <DependentUpon>FrmRecordatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Horarios.cs">
       <SubType>Form</SubType>
@@ -80,14 +98,23 @@
       <DependentUpon>FrmRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="Calendario.resx">
-      <DependentUpon>Calendario.cs</DependentUpon>
+    <EmbeddedResource Include="ControlUsuario.resx">
+      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlUsuarioDias.resx">
+      <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Datos_Usuario.resx">
       <DependentUpon>Datos_Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalendario.resx">
+      <DependentUpon>FrmCalendario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarSesion.resx">
       <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecordatorio.resx">
+      <DependentUpon>FrmRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Horarios.resx">
       <DependentUpon>Horarios.cs</DependentUpon>
