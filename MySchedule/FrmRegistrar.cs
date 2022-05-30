@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions; // Librería necesaria.
+using System.Data.SqlClient;
 
 namespace MySchedule
 {
@@ -101,6 +102,8 @@ namespace MySchedule
         // Método para verificar si el [Correo] ya existe.
         private bool VerificarExistenciaCorreo(TextBox txtCorreo)
         {
+            if (ConexiónBD.VerificarCorreoBD(txtCorreo) == true)
+                return true;
             return false;
         }
 
@@ -115,6 +118,20 @@ namespace MySchedule
                 return false;
             else
                 return true;
+        }
+
+        // Método para verificar el que el registro cumpla todos los requisitos.
+        private bool VerificarRegistro()
+        {
+            // Verificamos que los términos y condiciones estén marcadas
+            if (cboxTermYCond.Checked == false)
+                return Program.MensajeError("Términos y condiciones", "Se deben aceptar los términos y condiciones antes de registrarse!");
+
+            // Invocamos el método [ValidarDatos].
+            if (ValidarDatos() == false)
+                return Program.MensajeError("Validación de los datos", "Por favor ingrese los datos con su formato correcto");
+
+            return true;
         }
 
         // ===== [ FIN MÉTODOS ] ===== //
@@ -180,28 +197,32 @@ namespace MySchedule
         // Evento para validar y registrar al usuario.
         public void cmdRegistrar_Click(object sender, EventArgs e)
         {
-            // Verificamos que los términos y condiciones estén marcadas
-            if (cboxTermYCond.Checked == false)
-                Program.MensajeError("Términos y condiciones", "Se deben aceptar los términos y condiciones antes de registrarse!");
+            if (VerificarRegistro() == true)
+            {
+                // Generamos una nueva instancia de la clase [Usuario].
+                Usuario NuevoUsuario = new Usuario(txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtContraseña.Text);
 
-            // Invocamos el método [ValidarDatos].
-            ValidarDatos();
+                // Invocamos el método [ConectarBD] para abrir la conexión con la base de datos.
+                ConexiónBD.ConectarBD();
 
-            // Creamos una instancia de la clase [ConexiónBD].
-            ConexiónBD NuevaConexión = new ConexiónBD();
+                //Invocamos al método[InsertarUsuario].
+                if (ConexiónBD.InsertarUsuario(NuevoUsuario) == 0)
+                    Program.MensajeError("Inserción de los datos", "Ocurrió un error en los datos insertados");
 
-            // Invocamos método [ConectarBD].
-            NuevaConexión.ConectarBD();
+                // Invocamos el método [DesconectarBD] para cerrar la conexión con la base de datos.
+                ConexiónBD.DesconectarBD();
 
-            // Generamos una nueva instancia de la clase [Usuario].
-            Usuario NuevoUsuario = new Usuario(txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtContraseña.Text);
+                MessageBox.Show("Se han registrado correctamente sus datos, ahora puede iniciar sesión", "Registro exitoso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Invocamos al método [InsertarUsuario].
-            if (ConexiónBD.InsertarUsuario(NuevoUsuario) == 0)
-                Program.MensajeError("Inserción de los datos", "Ocurrió un error en los datos insertados");
-            else MessageBox.Show("Los datos se han registrado correctamente!", "Registro completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Generamos una nueva instancia de la clase [FrmIniciarSesion].
+                FrmIniciarSesion frmIniSes = new FrmIniciarSesion();
 
-            NuevaConexión.DesconectarBD();
+                // Mostramos la forma.
+                frmIniSes.Show();
+
+                // Cerramos la forma actual.
+                this.Close();
+            }
         }
 
         // ===== [ FIN EVENTOS ] ===== //
