@@ -82,8 +82,8 @@ namespace MySchedule
                 Program.MensajeError("Apellido", "El Apellido no puede superar los 30 caracteres!");
             else if (txtCorreo.TextLength > 49)
                 Program.MensajeError("Correo", "El Correo no puede superar los 50 caracteres!");
-            else if (txtContraseña.TextLength > 19)
-                Program.MensajeError("Contraseña", "La contraseña no puede superar los 20 caracteres!");
+            else if (txtContraseña.TextLength > 49)
+                Program.MensajeError("Contraseña", "La contraseña no puede superar los 50 caracteres!");
         }
 
         // Método para verificar el formato de [Contraseña].
@@ -215,7 +215,7 @@ namespace MySchedule
                 MessageBox.Show("Se han registrado correctamente sus datos, ahora puede iniciar sesión", "Registro exitoso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Generamos una nueva instancia de la clase [FrmIniciarSesion].
-                FrmIniciarSesion frmIniSes = new FrmIniciarSesion();
+                FrmIniciarSesion frmIniSes = new FrmIniciarSesion(txtCorreo.Text);
 
                 // Mostramos la forma.
                 frmIniSes.Show();

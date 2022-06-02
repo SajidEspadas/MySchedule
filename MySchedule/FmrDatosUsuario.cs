@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MySchedule
 {
-    public partial class Datos_Usuario : Form
+    public partial class FmrDatosUsuario : Form
     {
-        public Datos_Usuario()
+        public FmrDatosUsuario()
         {
             InitializeComponent();
+        }
+
+        public static void DesplegarDatos()
+        {
+            //ConexiónBD.DesplegarDatosUsuario();
         }
     }
 }

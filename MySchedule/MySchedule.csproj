@@ -59,17 +59,23 @@
     <Compile Include="ControlUsuarioDias.Designer.cs">
       <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Datos_Usuario.cs">
+    <Compile Include="FmrDatosUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Datos_Usuario.Designer.cs">
-      <DependentUpon>Datos_Usuario.cs</DependentUpon>
+    <Compile Include="FmrDatosUsuario.Designer.cs">
+      <DependentUpon>FmrDatosUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCalendario.Designer.cs">
       <DependentUpon>FrmCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHorario.Designer.cs">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIniciarSesion.cs">
       <SubType>Form</SubType>
@@ -82,12 +88,6 @@
     </Compile>
     <Compile Include="FrmRecordatorio.Designer.cs">
       <DependentUpon>FrmRecordatorio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Horarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Horarios.Designer.cs">
-      <DependentUpon>Horarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,8 +104,8 @@
     <EmbeddedResource Include="ControlUsuarioDias.resx">
       <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Datos_Usuario.resx">
-      <DependentUpon>Datos_Usuario.cs</DependentUpon>
+    <EmbeddedResource Include="FmrDatosUsuario.resx">
+      <DependentUpon>FmrDatosUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCalendario.resx">
       <DependentUpon>FrmCalendario.cs</DependentUpon>
@@ -115,9 +115,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRecordatorio.resx">
       <DependentUpon>FrmRecordatorio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Horarios.resx">
-      <DependentUpon>Horarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

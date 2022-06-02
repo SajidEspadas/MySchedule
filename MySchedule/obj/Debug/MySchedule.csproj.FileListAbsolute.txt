@@ -39,7 +39,7 @@ C:\Users\Owner\Desktop\FinalProyectoIS\MySchedule\obj\Debug\MySchedule.pdb
 C:\Users\Owner\Desktop\FinalProyectoIS\MySchedule\obj\Debug\MySchedule.FrmRecordatorio.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.ControlUsuario.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.ControlUsuarioDias.resources
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.Datos_Usuario.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmCalendario.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmRecordatorio.resources
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.Horarios.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FmrDatosUsuario.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmHorario.resources

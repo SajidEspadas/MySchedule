@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MySchedule
 {
-    public partial class Horarios : Form
+    public partial class FrmHorario : Form
     {
-        public Horarios()
+        public FrmHorario(string iD)
         {
             InitializeComponent();
         }
