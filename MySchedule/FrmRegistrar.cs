@@ -58,32 +58,49 @@ namespace MySchedule
         {
             // Verificamos los [Textbox].
             if (txtNombre.Text == "" || txtApellido.Text == "" || txtCorreo.Text == "" || txtContraseña.Text == "")
-                return Program.MensajeError("Datos ingresados", "Por favor llene todos los datos antes de registrase.");
-            else if (VerificarFormatoCorreo(txtCorreo))
-                return Program.MensajeError("Correo", "Por favor ingrese un formato válido");
-            else if (VerificarExistenciaCorreo(txtCorreo))
-                return Program.MensajeError("Correo", "El correo que intenta registrar ya existe, por favor ingrese otro correo.");
-            else if (VerificarFormatoContraseña(txtContraseña))
-                return Program.MensajeError("Contraseña", "Por favor ingrese una contraseña válida");
+            {
+                Program.MensajeError("Datos ingresados", "Por favor llene todos los datos antes de registrase.");
+                return false;
+            }
 
             // Invocamos el método [VerificarLongitud].
-            VerificarLongitud(txtNombre, txtApellido, txtCorreo, txtContraseña);
+            if (VerificarLongitud(txtNombre, txtApellido, txtCorreo, txtContraseña) == false)
+                return false;
+
+            if (VerificarExistenciaCorreo(txtCorreo))
+            {
+                Program.MensajeError("Correo", "El correo que intenta registrar ya existe, por favor ingrese otro correo.");
+                return false;
+            }
+
+            if (VerificarFormatoCorreo(txtCorreo) == false)
+            {
+                Program.MensajeError("Correo", "Por favor ingrese un formato válido");
+                return false;
+            }
+            else if (VerificarFormatoContraseña(txtContraseña) == false)
+            {
+                Program.MensajeError("Contraseña", "Por favor ingrese una contraseña válida");
+                return false;
+            }
 
             return true;
         }
 
         // Método para verificar la longitud de los textos ingresados.
-        private void VerificarLongitud(TextBox txtNombre, TextBox txtApellido, TextBox txtCorreo, TextBox txtContraseña)
+        private bool VerificarLongitud(TextBox txtNombre, TextBox txtApellido, TextBox txtCorreo, TextBox txtContraseña)
         {
+            if(txtNombre.TextLength > 29 || txtApellido.TextLength > 29 || txtCorreo.TextLength > 49 || txtContraseña.TextLength > 49)
+            {
+                Program.MensajeError("Longitud de los datos ingresados", "Verifique que sus datos ingresados cumplan con las especificaciones:" +
+                    "\n Nombre no puede ser superior a [30] caracteres." +
+                    "\n Apellido no puede ser superior a [30] caracteres." +
+                    "\n Correo no puede ser superior a [49] caracteres." +
+                    "\n Contraseña no puede ser superior a [49] caracteres.");
 
-            if (txtNombre.TextLength > 29)
-                Program.MensajeError("Nombre", "El nombre no puede superar los 30 caracteres!");
-            else if (txtApellido.TextLength > 29)
-                Program.MensajeError("Apellido", "El Apellido no puede superar los 30 caracteres!");
-            else if (txtCorreo.TextLength > 49)
-                Program.MensajeError("Correo", "El Correo no puede superar los 50 caracteres!");
-            else if (txtContraseña.TextLength > 49)
-                Program.MensajeError("Contraseña", "La contraseña no puede superar los 50 caracteres!");
+                return false;
+            }
+            return true;
         }
 
         // Método para verificar el formato de [Contraseña].
@@ -94,9 +111,16 @@ namespace MySchedule
 
             // Verificamos que el correo cumpla con el patrón.
             if (Regex.IsMatch(txtContraseña.Text, PatronContraseña))
-                return false;
-            else
                 return true;
+            else
+            {
+                Program.MensajeError("Formato de la contraseña", "Verifique que sus datos ingresados cumplan con las especificaciones:" +
+                    "\n Debe de empezar con una letra." +
+                    "\n Debe de al menos un número." +
+                    "\n Debe de tener una longitud mínima de [8] caracteres" +
+                    "\n Debe de tener una longitud máxima de [50] caracteres");
+                return false;
+            }
         }
 
         // Método para verificar si el [Correo] ya existe.
@@ -115,9 +139,15 @@ namespace MySchedule
 
             // Verificamos que el correo cumpla con el patrón.
             if (Regex.IsMatch(txtCorreo.Text, PatronCorreo))
-                return false;
-            else
                 return true;
+            else
+            {
+                Program.MensajeError("Formato del correo", "Verifique que sus datos ingresados cumplan con las especificaciones:" +
+                    "\n Debe contener el simbolo [@]." +
+                    "\n Debe contener al menos una extensión [Ej: \".com\"]" +
+                    "\n Debe de tener una longitud máxima de [50] caracteres");
+                return false;
+            }
         }
 
         // Método para verificar el que el registro cumpla todos los requisitos.
@@ -125,11 +155,17 @@ namespace MySchedule
         {
             // Verificamos que los términos y condiciones estén marcadas
             if (cboxTermYCond.Checked == false)
-                return Program.MensajeError("Términos y condiciones", "Se deben aceptar los términos y condiciones antes de registrarse!");
+            {
+                Program.MensajeError("Términos y condiciones", "Se deben aceptar los términos y condiciones antes de registrarse!");
+                return false;
+            }
 
             // Invocamos el método [ValidarDatos].
             if (ValidarDatos() == false)
-                return Program.MensajeError("Validación de los datos", "Por favor ingrese los datos con su formato correcto");
+            {
+                Program.MensajeError("Validación de los datos", "Por favor ingrese los datos con su formato correcto");
+                return false;
+            }
 
             return true;
         }
@@ -200,19 +236,20 @@ namespace MySchedule
             if (VerificarRegistro() == true)
             {
                 // Generamos una nueva instancia de la clase [Usuario].
-                Usuario NuevoUsuario = new Usuario(txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtContraseña.Text);
-
-                // Invocamos el método [ConectarBD] para abrir la conexión con la base de datos.
-                ConexiónBD.ConectarBD();
+                Usuario NuevoUsuario = new Usuario(txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtContraseña.Text);   
 
                 //Invocamos al método[InsertarUsuario].
                 if (ConexiónBD.InsertarUsuario(NuevoUsuario) == 0)
                     Program.MensajeError("Inserción de los datos", "Ocurrió un error en los datos insertados");
+                else MessageBox.Show("Se han registrado correctamente sus datos, ahora puede iniciar sesión \nPor favor espera unos segundos ya que necesitamos generar sus nuevos horarios...", "Registro exitoso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Invocamos el método [DesconectarBD] para cerrar la conexión con la base de datos.
-                ConexiónBD.DesconectarBD();
+                // Obtenemos el [ID] del usuario.
+                int ID = ConexiónBD.ObtenerID(txtCorreo, txtContraseña);
 
-                MessageBox.Show("Se han registrado correctamente sus datos, ahora puede iniciar sesión", "Registro exitoso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Invocamos al método [GenerarEspacioDeHorarios].
+                if (ID > 0)
+                    ConexiónBD.GenerarHorariosUsuarioNuevo(ID);
+                else Program.MensajeError("Error generando horarios","Ha ocurrido un error al momento de generar sus horarios!");
 
                 // Generamos una nueva instancia de la clase [FrmIniciarSesion].
                 FrmIniciarSesion frmIniSes = new FrmIniciarSesion(txtCorreo.Text);
@@ -224,7 +261,6 @@ namespace MySchedule
                 this.Close();
             }
         }
-
         // ===== [ FIN EVENTOS ] ===== //
 
         // || ============================================================================= || //

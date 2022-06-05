@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MySchedule"
   ],
-  "SelectedNode": "\\MySchedule.sln",
+  "SelectedNode": "\\MySchedule\\ConexiónBD.cs",
   "PreviewInSolutionExplorer": false
 }

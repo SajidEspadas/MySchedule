@@ -33,5 +33,15 @@ namespace MySchedule.Properties {
                 return ((string)(this["MySchedule_DBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=pc.axolotlteam.com;Initial Catalog=MySchedule;User ID=sajid")]
+        public string MyScheduleConnectionString {
+            get {
+                return ((string)(this["MyScheduleConnectionString"]));
+            }
+        }
     }
 }

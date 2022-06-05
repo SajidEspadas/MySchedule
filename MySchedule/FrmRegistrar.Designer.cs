@@ -126,6 +126,7 @@ namespace MySchedule
             // 
             this.txtContraseña.Location = new System.Drawing.Point(164, 492);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '●';
             this.txtContraseña.Size = new System.Drawing.Size(185, 22);
             this.txtContraseña.TabIndex = 14;
             // 

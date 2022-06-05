@@ -70,7 +70,7 @@ namespace MySchedule
             if (ConexiónBD.ValidarInicioDeSesion(txtCorreo, txtContraseña) == true)
             {
                 // Invocamos la función [InicioDeSesion] y retornamos el valor del [ID].
-                string ID = ConexiónBD.InicioDeSesion(txtCorreo, txtContraseña);
+                int ID = ConexiónBD.InicioDeSesion(txtCorreo, txtContraseña);
 
                 // Ocultamos la forma anterior [IniciarSesión].
                 Hide();

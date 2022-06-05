@@ -59,12 +59,6 @@
     <Compile Include="ControlUsuarioDias.Designer.cs">
       <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
     </Compile>
-    <Compile Include="FmrDatosUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FmrDatosUsuario.Designer.cs">
-      <DependentUpon>FmrDatosUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +83,11 @@
     <Compile Include="FrmRecordatorio.Designer.cs">
       <DependentUpon>FrmRecordatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyScheduleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyScheduleDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmRegistrar.cs">
@@ -104,11 +103,11 @@
     <EmbeddedResource Include="ControlUsuarioDias.resx">
       <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FmrDatosUsuario.resx">
-      <DependentUpon>FmrDatosUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmCalendario.resx">
       <DependentUpon>FrmCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHorario.resx">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarSesion.resx">
       <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
@@ -128,6 +127,17 @@
     <EmbeddedResource Include="FrmRegistrar.resx">
       <DependentUpon>FrmRegistrar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MyScheduleDataSet.xsc">
+      <DependentUpon>MyScheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyScheduleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyScheduleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyScheduleDataSet.xss">
+      <DependentUpon>MyScheduleDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

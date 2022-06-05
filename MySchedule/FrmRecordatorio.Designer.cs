@@ -39,15 +39,13 @@ namespace MySchedule
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdLimpiar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
-            this.dtpRecordatorio = new System.Windows.Forms.DateTimePicker();
-            this.lblAlarma = new System.Windows.Forms.Label();
-            this.dtpAlarma = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblFechaInicio
             // 
             this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Location = new System.Drawing.Point(33, 48);
+            this.lblFechaInicio.Location = new System.Drawing.Point(279, 43);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(87, 17);
             this.lblFechaInicio.TabIndex = 0;
@@ -56,15 +54,16 @@ namespace MySchedule
             // txtFechaInicio
             // 
             this.txtFechaInicio.Enabled = false;
-            this.txtFechaInicio.Location = new System.Drawing.Point(126, 45);
+            this.txtFechaInicio.Location = new System.Drawing.Point(372, 42);
             this.txtFechaInicio.Name = "txtFechaInicio";
-            this.txtFechaInicio.Size = new System.Drawing.Size(167, 22);
+            this.txtFechaInicio.ReadOnly = true;
+            this.txtFechaInicio.Size = new System.Drawing.Size(141, 22);
             this.txtFechaInicio.TabIndex = 1;
             // 
             // lblFechaFin
             // 
             this.lblFechaFin.AutoSize = true;
-            this.lblFechaFin.Location = new System.Drawing.Point(422, 48);
+            this.lblFechaFin.Location = new System.Drawing.Point(519, 45);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(74, 17);
             this.lblFechaFin.TabIndex = 2;
@@ -73,17 +72,17 @@ namespace MySchedule
             // lblNombreRecordatorio
             // 
             this.lblNombreRecordatorio.AutoSize = true;
-            this.lblNombreRecordatorio.Location = new System.Drawing.Point(33, 109);
+            this.lblNombreRecordatorio.Location = new System.Drawing.Point(33, 141);
             this.lblNombreRecordatorio.Name = "lblNombreRecordatorio";
-            this.lblNombreRecordatorio.Size = new System.Drawing.Size(167, 17);
+            this.lblNombreRecordatorio.Size = new System.Drawing.Size(171, 17);
             this.lblNombreRecordatorio.TabIndex = 4;
-            this.lblNombreRecordatorio.Text = "Nombre del Recordatorio";
+            this.lblNombreRecordatorio.Text = "Nombre del Recordatorio:";
             // 
             // txtNombreRecordatorio
             // 
-            this.txtNombreRecordatorio.Location = new System.Drawing.Point(225, 106);
+            this.txtNombreRecordatorio.Location = new System.Drawing.Point(225, 138);
             this.txtNombreRecordatorio.Name = "txtNombreRecordatorio";
-            this.txtNombreRecordatorio.Size = new System.Drawing.Size(329, 22);
+            this.txtNombreRecordatorio.Size = new System.Drawing.Size(515, 22);
             this.txtNombreRecordatorio.TabIndex = 5;
             // 
             // lblComentario
@@ -98,8 +97,9 @@ namespace MySchedule
             // txtComentario
             // 
             this.txtComentario.Location = new System.Drawing.Point(126, 166);
+            this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(558, 22);
+            this.txtComentario.Size = new System.Drawing.Size(614, 150);
             this.txtComentario.TabIndex = 7;
             // 
             // cmdGuardar
@@ -124,6 +124,7 @@ namespace MySchedule
             // 
             // cmdCancelar
             // 
+            this.cmdCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cmdCancelar.Location = new System.Drawing.Point(587, 322);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(85, 23);
@@ -132,41 +133,23 @@ namespace MySchedule
             this.cmdCancelar.UseVisualStyleBackColor = true;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
-            // dtpRecordatorio
+            // dtpFechaFin
             // 
-            this.dtpRecordatorio.CustomFormat = "dd/MM/yyyy";
-            this.dtpRecordatorio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRecordatorio.Location = new System.Drawing.Point(502, 45);
-            this.dtpRecordatorio.Name = "dtpRecordatorio";
-            this.dtpRecordatorio.Size = new System.Drawing.Size(273, 22);
-            this.dtpRecordatorio.TabIndex = 11;
-            // 
-            // lblAlarma
-            // 
-            this.lblAlarma.AutoSize = true;
-            this.lblAlarma.Location = new System.Drawing.Point(33, 248);
-            this.lblAlarma.Name = "lblAlarma";
-            this.lblAlarma.Size = new System.Drawing.Size(52, 17);
-            this.lblAlarma.TabIndex = 12;
-            this.lblAlarma.Text = "Alarma";
-            // 
-            // dtpAlarma
-            // 
-            this.dtpAlarma.CustomFormat = "hh:mm:ss";
-            this.dtpAlarma.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpAlarma.Location = new System.Drawing.Point(117, 248);
-            this.dtpAlarma.Name = "dtpAlarma";
-            this.dtpAlarma.Size = new System.Drawing.Size(110, 22);
-            this.dtpAlarma.TabIndex = 13;
+            this.dtpFechaFin.CustomFormat = "";
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaFin.Location = new System.Drawing.Point(599, 43);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(141, 22);
+            this.dtpFechaFin.TabIndex = 11;
             // 
             // FrmRecordatorio
             // 
+            this.AcceptButton = this.cmdGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cmdCancelar;
             this.ClientSize = new System.Drawing.Size(787, 357);
-            this.Controls.Add(this.dtpAlarma);
-            this.Controls.Add(this.lblAlarma);
-            this.Controls.Add(this.dtpRecordatorio);
+            this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdLimpiar);
             this.Controls.Add(this.cmdGuardar);
@@ -198,8 +181,6 @@ namespace MySchedule
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.Button cmdLimpiar;
         private System.Windows.Forms.Button cmdCancelar;
-        private System.Windows.Forms.DateTimePicker dtpRecordatorio;
-        private System.Windows.Forms.Label lblAlarma;
-        private System.Windows.Forms.DateTimePicker dtpAlarma;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
     }
 }

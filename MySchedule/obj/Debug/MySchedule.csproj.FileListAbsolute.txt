@@ -41,5 +41,4 @@ C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.ControlUs
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.ControlUsuarioDias.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmCalendario.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmRecordatorio.resources
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FmrDatosUsuario.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmHorario.resources
