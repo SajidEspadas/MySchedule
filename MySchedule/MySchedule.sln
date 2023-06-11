@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySchedule", "MySchedule.csproj", "{202410CE-DEE5-4E72-8969-F5ABB21E63C8}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MySchedule' setup", "..\MySchedule' setup\MySchedule' setup.vdproj", "{C7312B26-6023-44BC-A7DF-0519B9071BB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{202410CE-DEE5-4E72-8969-F5ABB21E63C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{202410CE-DEE5-4E72-8969-F5ABB21E63C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{202410CE-DEE5-4E72-8969-F5ABB21E63C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7312B26-6023-44BC-A7DF-0519B9071BB6}.Debug|Any CPU.ActiveCfg = Debug
+		{C7312B26-6023-44BC-A7DF-0519B9071BB6}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

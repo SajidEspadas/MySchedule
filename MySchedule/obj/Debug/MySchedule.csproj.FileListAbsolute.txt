@@ -37,8 +37,12 @@ C:\Users\Owner\Desktop\FinalProyectoIS\MySchedule\obj\Debug\MySchedule.csproj.Co
 C:\Users\Owner\Desktop\FinalProyectoIS\MySchedule\obj\Debug\MySchedule.exe
 C:\Users\Owner\Desktop\FinalProyectoIS\MySchedule\obj\Debug\MySchedule.pdb
 C:\Users\Owner\Desktop\FinalProyectoIS\MySchedule\obj\Debug\MySchedule.FrmRecordatorio.resources
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.ControlUsuario.resources
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.ControlUsuarioDias.resources
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmCalendario.resources
-C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmRecordatorio.resources
 C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmHorario.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmAgregarMateria.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmAgregarDocente.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmMEditarEliminarMateria.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.FrmEditarEliminarDocente.resources
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.exe.manifest
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\bin\Debug\MySchedule.application
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.exe.manifest
+C:\Users\ADMIN\Source\Repos\MySchedule\MySchedule\obj\Debug\MySchedule.application

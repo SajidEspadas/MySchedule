@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +48,39 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3C5723267452A452447ECF204764897205FAD668</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MySchedule_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconoMS-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,24 +93,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConexiónBD.cs" />
-    <Compile Include="ControlUsuario.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlUsuario.Designer.cs">
-      <DependentUpon>ControlUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlUsuarioDias.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlUsuarioDias.Designer.cs">
-      <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCalendario.cs">
+    <Compile Include="AgregarDocente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCalendario.Designer.cs">
-      <DependentUpon>FrmCalendario.cs</DependentUpon>
+    <Compile Include="AgregarDocente.Designer.cs">
+      <DependentUpon>AgregarDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConexiónBD.cs" />
+    <Compile Include="FrmEditarEliminarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarEliminarDocente.Designer.cs">
+      <DependentUpon>FrmEditarEliminarDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarEliminarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarEliminarMateria.Designer.cs">
+      <DependentUpon>FrmEditarEliminarMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarMateria.Designer.cs">
+      <DependentUpon>FrmAgregarMateria.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHorario.cs">
       <SubType>Form</SubType>
@@ -77,11 +130,8 @@
     <Compile Include="FrmIniciarSesion.Designer.cs">
       <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRecordatorio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRecordatorio.Designer.cs">
-      <DependentUpon>FrmRecordatorio.cs</DependentUpon>
+    <Compile Include="MyScheduleDataSet.cs">
+      <DependentUpon>MyScheduleDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MyScheduleDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -97,23 +147,23 @@
       <DependentUpon>FrmRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="ControlUsuario.resx">
-      <DependentUpon>ControlUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarDocente.resx">
+      <DependentUpon>AgregarDocente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlUsuarioDias.resx">
-      <DependentUpon>ControlUsuarioDias.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEditarEliminarDocente.resx">
+      <DependentUpon>FrmEditarEliminarDocente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCalendario.resx">
-      <DependentUpon>FrmCalendario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEditarEliminarMateria.resx">
+      <DependentUpon>FrmEditarEliminarMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarMateria.resx">
+      <DependentUpon>FrmAgregarMateria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHorario.resx">
       <DependentUpon>FrmHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarSesion.resx">
       <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRecordatorio.resx">
-      <DependentUpon>FrmRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,6 +188,7 @@
     <None Include="MyScheduleDataSet.xss">
       <DependentUpon>MyScheduleDataSet.xsd</DependentUpon>
     </None>
+    <None Include="MySchedule_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +201,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IconoMS-removebg-preview.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

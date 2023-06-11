@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions; // Librería necesaria.
 using System.Data.SqlClient;
+using ComponentFactory.Krypton.Toolkit;
+using MySchedule.Properties;
 
 namespace MySchedule
 {
-    public partial class FrmRegistrar : Form
+    public partial class FrmRegistrar : KryptonForm
     {
         public FrmRegistrar()
         {
             InitializeComponent();
+
+            kcmdCerrar.Visible = false;
         }
 
         // || ============================================================================= || //
@@ -24,7 +28,7 @@ namespace MySchedule
         // ===== [ INICIO MÉTODOS ] ===== //
 
         // Método para reemplazar los acentos no aceptados.
-        public static string ReemplazarAcentos(string txtCajaTexto)
+        public static string ReemplazarAcentos(string ktxtCajaTexto)
         {
             // Establecemos las letras que no son aceptadas.
             Regex Reemplazo_a = new Regex("[á|à|ä|â]", RegexOptions.Compiled);
@@ -39,46 +43,46 @@ namespace MySchedule
             Regex Reemplazo_U = new Regex("[Ú]", RegexOptions.Compiled);
 
             // Establecemos los reemplazos para dichas letras.
-            txtCajaTexto = Reemplazo_a.Replace(txtCajaTexto, "a");
-            txtCajaTexto = Reemplazo_e.Replace(txtCajaTexto, "e");
-            txtCajaTexto = Reemplazo_i.Replace(txtCajaTexto, "i");
-            txtCajaTexto = Reemplazo_o.Replace(txtCajaTexto, "o");
-            txtCajaTexto = Reemplazo_u.Replace(txtCajaTexto, "u");
-            txtCajaTexto = Reemplazo_A.Replace(txtCajaTexto, "A");
-            txtCajaTexto = Reemplazo_E.Replace(txtCajaTexto, "E");
-            txtCajaTexto = Reemplazo_I.Replace(txtCajaTexto, "I");
-            txtCajaTexto = Reemplazo_O.Replace(txtCajaTexto, "O");
-            txtCajaTexto = Reemplazo_U.Replace(txtCajaTexto, "U");
+            ktxtCajaTexto = Reemplazo_a.Replace(ktxtCajaTexto, "a");
+            ktxtCajaTexto = Reemplazo_e.Replace(ktxtCajaTexto, "e");
+            ktxtCajaTexto = Reemplazo_i.Replace(ktxtCajaTexto, "i");
+            ktxtCajaTexto = Reemplazo_o.Replace(ktxtCajaTexto, "o");
+            ktxtCajaTexto = Reemplazo_u.Replace(ktxtCajaTexto, "u");
+            ktxtCajaTexto = Reemplazo_A.Replace(ktxtCajaTexto, "A");
+            ktxtCajaTexto = Reemplazo_E.Replace(ktxtCajaTexto, "E");
+            ktxtCajaTexto = Reemplazo_I.Replace(ktxtCajaTexto, "I");
+            ktxtCajaTexto = Reemplazo_O.Replace(ktxtCajaTexto, "O");
+            ktxtCajaTexto = Reemplazo_U.Replace(ktxtCajaTexto, "U");
 
-            return txtCajaTexto;
+            return ktxtCajaTexto;
         }
 
         // Método para validar las entradas de los datos.
         private bool ValidarDatos()
         {
             // Verificamos los [Textbox].
-            if (txtNombre.Text == "" || txtApellido.Text == "" || txtCorreo.Text == "" || txtContraseña.Text == "")
+            if (ktxtNombre.Text == "" || ktxtApellido.Text == "" || ktxtCorreo.Text == "" || ktxtContraseña.Text == "")
             {
                 Program.MensajeError("Datos ingresados", "Por favor llene todos los datos antes de registrase.");
                 return false;
             }
 
             // Invocamos el método [VerificarLongitud].
-            if (VerificarLongitud(txtNombre, txtApellido, txtCorreo, txtContraseña) == false)
+            if (VerificarLongitud(ktxtNombre, ktxtApellido, ktxtCorreo, ktxtContraseña) == false)
                 return false;
 
-            if (VerificarExistenciaCorreo(txtCorreo))
+            if (VerificarExistenciaCorreo(ktxtCorreo))
             {
                 Program.MensajeError("Correo", "El correo que intenta registrar ya existe, por favor ingrese otro correo.");
                 return false;
             }
 
-            if (VerificarFormatoCorreo(txtCorreo) == false)
+            if (VerificarFormatoCorreo(ktxtCorreo) == false)
             {
                 Program.MensajeError("Correo", "Por favor ingrese un formato válido");
                 return false;
             }
-            else if (VerificarFormatoContraseña(txtContraseña) == false)
+            else if (VerificarFormatoContraseña(ktxtContraseña) == false)
             {
                 Program.MensajeError("Contraseña", "Por favor ingrese una contraseña válida");
                 return false;
@@ -88,9 +92,9 @@ namespace MySchedule
         }
 
         // Método para verificar la longitud de los textos ingresados.
-        private bool VerificarLongitud(TextBox txtNombre, TextBox txtApellido, TextBox txtCorreo, TextBox txtContraseña)
+        private bool VerificarLongitud(KryptonTextBox ktxtNombre, KryptonTextBox ktxtApellido, KryptonTextBox ktxtCorreo, KryptonTextBox ktxtContraseña)
         {
-            if(txtNombre.TextLength > 29 || txtApellido.TextLength > 29 || txtCorreo.TextLength > 49 || txtContraseña.TextLength > 49)
+            if(ktxtNombre.TextLength > 29 || ktxtApellido.TextLength > 29 || ktxtCorreo.TextLength > 49 || ktxtContraseña.TextLength > 49)
             {
                 Program.MensajeError("Longitud de los datos ingresados", "Verifique que sus datos ingresados cumplan con las especificaciones:" +
                     "\n Nombre no puede ser superior a [30] caracteres." +
@@ -104,13 +108,13 @@ namespace MySchedule
         }
 
         // Método para verificar el formato de [Contraseña].
-        private bool VerificarFormatoContraseña(TextBox txtContraseña)
+        private bool VerificarFormatoContraseña(KryptonTextBox ktxtContraseña)
         {
             // Establecemos el [patrón] de la expresión regular que comple con el formato para el [Contraseña].
             string PatronContraseña = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
 
             // Verificamos que el correo cumpla con el patrón.
-            if (Regex.IsMatch(txtContraseña.Text, PatronContraseña))
+            if (Regex.IsMatch(ktxtContraseña.Text, PatronContraseña))
                 return true;
             else
             {
@@ -124,21 +128,21 @@ namespace MySchedule
         }
 
         // Método para verificar si el [Correo] ya existe.
-        private bool VerificarExistenciaCorreo(TextBox txtCorreo)
+        private bool VerificarExistenciaCorreo(KryptonTextBox ktxtCorreo)
         {
-            if (ConexiónBD.VerificarCorreoBD(txtCorreo) == true)
+            if (ConexiónBD.VerificarCorreoBD(ktxtCorreo) == true)
                 return true;
             return false;
         }
 
         // Método para verificar el formato del [Correo].
-        private bool VerificarFormatoCorreo(TextBox txtCorreo)
+        private bool VerificarFormatoCorreo(KryptonTextBox ktxtCorreo)
         {
             // Establecemos el [patrón] de la expresión regular que comple con el formato para el [Correo].
             string PatronCorreo = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
 
             // Verificamos que el correo cumpla con el patrón.
-            if (Regex.IsMatch(txtCorreo.Text, PatronCorreo))
+            if (Regex.IsMatch(ktxtCorreo.Text, PatronCorreo))
                 return true;
             else
             {
@@ -217,7 +221,7 @@ namespace MySchedule
             pnlTermYCond.Visible = true;
 
             // Volvemos visible el botón [cmdCerrar].
-            cmdCerrar.Visible = true;
+            kcmdCerrar.Visible = true;
         }
 
         // Evento para volver invisible el panel [pnlTermYCond].
@@ -227,7 +231,7 @@ namespace MySchedule
             pnlTermYCond.Visible = false;
 
             // Volvemos invisible el botón [cmdCerrar]
-            cmdCerrar.Visible = false;
+            kcmdCerrar.Visible = false;
         }
 
         // Evento para validar y registrar al usuario.
@@ -236,7 +240,7 @@ namespace MySchedule
             if (VerificarRegistro() == true)
             {
                 // Generamos una nueva instancia de la clase [Usuario].
-                Usuario NuevoUsuario = new Usuario(txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtContraseña.Text);   
+                Usuario NuevoUsuario = new Usuario(ktxtNombre.Text, ktxtApellido.Text, ktxtCorreo.Text, ktxtContraseña.Text);   
 
                 //Invocamos al método[InsertarUsuario].
                 if (ConexiónBD.InsertarUsuario(NuevoUsuario) == 0)
@@ -244,7 +248,7 @@ namespace MySchedule
                 else MessageBox.Show("Se han registrado correctamente sus datos, ahora puede iniciar sesión \nPor favor espera unos segundos ya que necesitamos generar sus nuevos horarios...", "Registro exitoso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Obtenemos el [ID] del usuario.
-                int ID = ConexiónBD.ObtenerID(txtCorreo, txtContraseña);
+                int ID = ConexiónBD.ObtenerID(ktxtCorreo, ktxtContraseña);
 
                 // Invocamos al método [GenerarEspacioDeHorarios].
                 if (ID > 0)
@@ -252,7 +256,7 @@ namespace MySchedule
                 else Program.MensajeError("Error generando horarios","Ha ocurrido un error al momento de generar sus horarios!");
 
                 // Generamos una nueva instancia de la clase [FrmIniciarSesion].
-                FrmIniciarSesion frmIniSes = new FrmIniciarSesion(txtCorreo.Text);
+                FrmIniciarSesion frmIniSes = new FrmIniciarSesion(ktxtCorreo.Text);
 
                 // Mostramos la forma.
                 frmIniSes.Show();
@@ -261,6 +265,163 @@ namespace MySchedule
                 this.Close();
             }
         }
+
+        private void ktxtNombre_Enter(object sender, EventArgs e)
+        {
+            if (ktxtNombre.Text == "Nombre")
+            {
+                ktxtNombre.Text = "";
+                ktxtNombre.ForeColor = Color.Black;
+            }
+        }
+
+        private void ktxtNombre_Leave(object sender, EventArgs e)
+        {
+            if (ktxtNombre.Text == "")
+            {
+                ktxtNombre.Text = "Nombre";
+                ktxtNombre.ForeColor = Color.Silver;
+            }
+        }
+
+        private void ktxtApellido_Enter(object sender, EventArgs e)
+        {
+            if (ktxtApellido.Text == "Apellido")
+            {
+                ktxtApellido.Text = "";
+                ktxtApellido.ForeColor = Color.Black;
+            }
+        }
+
+        private void ktxtApellido_Leave(object sender, EventArgs e)
+        {
+            if (ktxtApellido.Text == "")
+            {
+                ktxtApellido.Text = "Apellido";
+                ktxtApellido.ForeColor = Color.Silver;
+            }
+        }
+
+        private void ktxtCorreo_Enter(object sender, EventArgs e)
+        {
+            if (ktxtCorreo.Text == "Correo")
+            {
+                ktxtCorreo.Text = "";
+                ktxtCorreo.ForeColor = Color.Black;
+            }
+        }
+
+        private void ktxtCorreo_Leave(object sender, EventArgs e)
+        {
+            if (ktxtCorreo.Text == "")
+            {
+                ktxtCorreo.Text = "Correo";
+                ktxtCorreo.ForeColor = Color.Silver;
+            }
+        }
+
+        private void ktxtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (ktxtContraseña.Text == "Contraseña")
+            {
+                ktxtContraseña.Text = "";
+                ktxtContraseña.ForeColor = Color.Black;
+            }
+        }
+
+        private void ktxtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (ktxtContraseña.Text == "")
+            {
+                ktxtContraseña.Text = "Contraseña";
+                ktxtContraseña.ForeColor = Color.Silver;
+            }
+        }
+
+        private void FrmRegistrar_Load(object sender, EventArgs e)
+        {
+            if ((bool)Settings.Default["ModoOscuro"] == false)
+                ActivarModoClaro();
+            else
+                ActivarModoOscuro();
+        }
+
+        private void ActivarModoOscuro()
+        {
+            Palette = PaletaModoOscuro;
+
+            BackColor = Color.DimGray;
+
+            ktxtNombre.StateCommon.Content.Color1 = Color.White;
+            ktxtNombre.Palette = PaletaModoOscuro;
+
+            ktxtApellido.StateCommon.Content.Color1 = Color.White;
+            ktxtApellido.Palette = PaletaModoOscuro;
+
+            ktxtCorreo.StateCommon.Content.Color1 = Color.White;
+            ktxtCorreo.Palette = PaletaModoOscuro;
+
+            ktxtContraseña.StateCommon.Content.Color1 = Color.White;
+            ktxtContraseña.Palette = PaletaModoOscuro;
+
+            kcmdRegistrar.StateNormal.Back.Color1 = Color.DimGray;
+            kcmdRegistrar.StateNormal.Back.Color2 = Color.DimGray;
+            kcmdRegistrar.Palette = PaletaModoOscuro;
+
+            kcmdCancelar.StateNormal.Back.Color1 = Color.DimGray;
+            kcmdCancelar.StateNormal.Back.Color2 = Color.DimGray;
+            kcmdCancelar.StateCommon.Content.ShortText.Color1 = Color.White;
+            kcmdCancelar.Palette = PaletaModoOscuro;
+
+            kcmdCerrar.StateNormal.Back.Color1 = Color.DimGray;
+            kcmdCerrar.StateNormal.Back.Color2 = Color.DimGray;
+            kcmdCerrar.StateCommon.Content.ShortText.Color1 = Color.White;
+            kcmdCerrar.Palette = PaletaModoOscuro;
+
+            lblTermYCond.LinkColor = Color.White;
+
+            pnlTermYCond.BackColor = Color.DimGray;
+            lblTermYCondText.ForeColor = Color.White;
+        }
+
+        private void ActivarModoClaro()
+        {
+            Palette = PaletaModoClaro;
+
+            BackColor = Color.FromArgb(252, 250, 250);
+
+            ktxtNombre.StateCommon.Content.Color1 = Color.DimGray;
+            ktxtNombre.Palette = PaletaModoClaro;
+
+            ktxtApellido.StateCommon.Content.Color1 = Color.DimGray;
+            ktxtApellido.Palette = PaletaModoClaro;
+
+            ktxtCorreo.StateCommon.Content.Color1 = Color.DimGray;
+            ktxtCorreo.Palette = PaletaModoClaro;
+
+            ktxtContraseña.StateCommon.Content.Color1 = Color.DimGray;
+            ktxtContraseña.Palette = PaletaModoClaro;
+
+            kcmdRegistrar.StateNormal.Back.Color1 = Color.FromArgb(252, 250, 250);
+            kcmdRegistrar.StateNormal.Back.Color2 = Color.FromArgb(252, 250, 250);
+            kcmdRegistrar.Palette = PaletaModoClaro;
+
+            kcmdCancelar.StateNormal.Back.Color1 = Color.FromArgb(252, 250, 250);
+            kcmdCancelar.StateNormal.Back.Color2 = Color.FromArgb(252, 250, 250);
+            kcmdCancelar.StateCommon.Content.ShortText.Color1 = Color.FromArgb(8, 142, 254);
+            kcmdCancelar.Palette = PaletaModoClaro;
+
+            kcmdCerrar.StateNormal.Back.Color1 = Color.FromArgb(252, 250, 250);
+            kcmdCerrar.StateNormal.Back.Color2 = Color.FromArgb(252, 250, 250);
+            kcmdCerrar.StateCommon.Content.ShortText.Color1 = Color.FromArgb(8, 142, 254);
+            kcmdCerrar.Palette = PaletaModoOscuro;
+
+            lblTermYCond.LinkColor = Color.Black;
+
+            pnlTermYCond.BackColor = Color.FromArgb(252, 250, 250);
+            lblTermYCondText.ForeColor = Color.Black;
+        }
+
         // ===== [ FIN EVENTOS ] ===== //
 
         // || ============================================================================= || //

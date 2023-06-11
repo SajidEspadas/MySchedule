@@ -43,5 +43,28 @@ namespace MySchedule.Properties {
                 return ((string)(this["MyScheduleConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-58M9B2VK;Initial Catalog=MyScheduleDB;User ID=sa;Password=1234" +
+            "5")]
+        public string MyScheduleDBConnectionString {
+            get {
+                return ((string)(this["MyScheduleDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ModoOscuro {
+            get {
+                return ((bool)(this["ModoOscuro"]));
+            }
+            set {
+                this["ModoOscuro"] = value;
+            }
+        }
     }
 }

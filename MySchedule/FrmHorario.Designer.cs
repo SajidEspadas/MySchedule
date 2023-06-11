@@ -31,326 +31,1749 @@ namespace MySchedule
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHorario));
-            this.gboxMenu = new System.Windows.Forms.GroupBox();
-            this.lblMaterias = new System.Windows.Forms.Label();
-            this.pboxMateria = new System.Windows.Forms.PictureBox();
-            this.lblDocente = new System.Windows.Forms.Label();
-            this.pboxDocente = new System.Windows.Forms.PictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.pboxUsuario = new System.Windows.Forms.PictureBox();
-            this.lblCalendario = new System.Windows.Forms.Label();
-            this.pboxCalendario = new System.Windows.Forms.PictureBox();
-            this.lblHorario = new System.Windows.Forms.Label();
-            this.pboxHorario = new System.Windows.Forms.PictureBox();
-            this.pnlEncabezado = new System.Windows.Forms.Panel();
-            this.pboxMinimizar = new System.Windows.Forms.PictureBox();
-            this.pboxCerrar = new System.Windows.Forms.PictureBox();
-            this.pnlHorario = new System.Windows.Forms.Panel();
-            this.gboxHorario = new System.Windows.Forms.GroupBox();
-            this.gboxSemana = new System.Windows.Forms.GroupBox();
-            this.dgvHorario = new System.Windows.Forms.DataGridView();
-            this.Columna_Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaletaModoClaro = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kpnlFullDock = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kpnlMenu = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kchkbModoClaroOscuro = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcmdMenuCerrar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdMultitarea = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdMateria = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdDocente = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdUsuario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdCerrarSesion = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdMenuAbrir = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdHorario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kpnlContenido = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kpnlDocente = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kgboxDocente = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kdgvDocente = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.kcmdAgregarDocente = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonDataGridView3 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.kpnlHorario = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kgboxHorario = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kgboxSemana = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kdgvHorario = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.kmnsSemana = new System.Windows.Forms.MenuStrip();
+            this.ktsmLunes = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmMartes = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmMiércoles = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmJueves = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmViernes = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmSábado = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmDomingo = new System.Windows.Forms.ToolStripMenuItem();
+            this.kmnsHorario = new System.Windows.Forms.MenuStrip();
+            this.ktsmHorario1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmHorario2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktsmHorario3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kpnlMateria = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kgboxMateria = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kdgvMateria = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.kpnlUsuario = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kgboxUsuario = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kcmdEditarContraseña = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdEditarApellido = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdEditarCorreo = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kcmdEditarNombre = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.ktxtContraseña = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.ktxtApellido = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.ktxtCorreo = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.ktxtNombre = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.PaletaModoOscuro = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.myScheduleDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myScheduleDataSet = new MySchedule.MyScheduleDataSet();
-            this.mnsSemana = new System.Windows.Forms.MenuStrip();
-            this.tsmLunes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmMartes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmMiércoles = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmJueves = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmViernes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmSábado = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDomingo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnsHorario = new System.Windows.Forms.MenuStrip();
-            this.tsmHorario1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmHorario2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmHorario3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlCalendario = new System.Windows.Forms.Panel();
-            this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.pnlDocente = new System.Windows.Forms.Panel();
-            this.pnlMateria = new System.Windows.Forms.Panel();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.cmdEditarNombre = new System.Windows.Forms.Button();
-            this.cmdEditarApellido = new System.Windows.Forms.Button();
-            this.cmdEditarCorreo = new System.Windows.Forms.Button();
-            this.cmdEditarContraseña = new System.Windows.Forms.Button();
-            this.dgvDocente = new System.Windows.Forms.DataGridView();
-            this.gboxDocente = new System.Windows.Forms.GroupBox();
-            this.gboxMateria = new System.Windows.Forms.GroupBox();
-            this.dgvMateria = new System.Windows.Forms.DataGridView();
-            this.pboxMultitarea = new System.Windows.Forms.PictureBox();
-            this.lblMultitarea = new System.Windows.Forms.Label();
-            this.gboxCalendario = new System.Windows.Forms.GroupBox();
-            this.gboxUsuario = new System.Windows.Forms.GroupBox();
-            this.pboxCerrarSesión = new System.Windows.Forms.PictureBox();
-            this.gboxMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxMateria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxDocente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxCalendario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxHorario)).BeginInit();
-            this.pnlEncabezado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxCerrar)).BeginInit();
-            this.pnlHorario.SuspendLayout();
-            this.gboxHorario.SuspendLayout();
-            this.gboxSemana.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlFullDock)).BeginInit();
+            this.kpnlFullDock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlMenu)).BeginInit();
+            this.kpnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlContenido)).BeginInit();
+            this.kpnlContenido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlDocente)).BeginInit();
+            this.kpnlDocente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxDocente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxDocente.Panel)).BeginInit();
+            this.kgboxDocente.Panel.SuspendLayout();
+            this.kgboxDocente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kdgvDocente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlHorario)).BeginInit();
+            this.kpnlHorario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxHorario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxHorario.Panel)).BeginInit();
+            this.kgboxHorario.Panel.SuspendLayout();
+            this.kgboxHorario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxSemana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxSemana.Panel)).BeginInit();
+            this.kgboxSemana.Panel.SuspendLayout();
+            this.kgboxSemana.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kdgvHorario)).BeginInit();
+            this.kmnsSemana.SuspendLayout();
+            this.kmnsHorario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlMateria)).BeginInit();
+            this.kpnlMateria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxMateria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxMateria.Panel)).BeginInit();
+            this.kgboxMateria.Panel.SuspendLayout();
+            this.kgboxMateria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kdgvMateria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlUsuario)).BeginInit();
+            this.kpnlUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxUsuario.Panel)).BeginInit();
+            this.kgboxUsuario.Panel.SuspendLayout();
+            this.kgboxUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myScheduleDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myScheduleDataSet)).BeginInit();
-            this.mnsSemana.SuspendLayout();
-            this.mnsHorario.SuspendLayout();
-            this.pnlCalendario.SuspendLayout();
-            this.pnlUsuario.SuspendLayout();
-            this.pnlDocente.SuspendLayout();
-            this.pnlMateria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
-            this.gboxDocente.SuspendLayout();
-            this.gboxMateria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMateria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxMultitarea)).BeginInit();
-            this.gboxUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxCerrarSesión)).BeginInit();
             this.SuspendLayout();
             // 
-            // gboxMenu
+            // PaletaModoClaro
             // 
-            this.gboxMenu.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.gboxMenu.Controls.Add(this.lblMultitarea);
-            this.gboxMenu.Controls.Add(this.pboxMultitarea);
-            this.gboxMenu.Controls.Add(this.lblMaterias);
-            this.gboxMenu.Controls.Add(this.pboxMateria);
-            this.gboxMenu.Controls.Add(this.lblDocente);
-            this.gboxMenu.Controls.Add(this.pboxDocente);
-            this.gboxMenu.Controls.Add(this.lblUsuario);
-            this.gboxMenu.Controls.Add(this.pboxUsuario);
-            this.gboxMenu.Controls.Add(this.lblCalendario);
-            this.gboxMenu.Controls.Add(this.pboxCalendario);
-            this.gboxMenu.Controls.Add(this.lblHorario);
-            this.gboxMenu.Controls.Add(this.pboxHorario);
-            this.gboxMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gboxMenu.Location = new System.Drawing.Point(0, 0);
-            this.gboxMenu.Name = "gboxMenu";
-            this.gboxMenu.Size = new System.Drawing.Size(113, 673);
-            this.gboxMenu.TabIndex = 0;
-            this.gboxMenu.TabStop = false;
-            this.gboxMenu.Text = "Menu";
+            this.PaletaModoClaro.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
+            this.PaletaModoClaro.ButtonSpecs.FormClose.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormClose.Image")));
+            this.PaletaModoClaro.ButtonSpecs.FormClose.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormClose.ImageStates.ImagePressed")));
+            this.PaletaModoClaro.ButtonSpecs.FormClose.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormClose.ImageStates.ImageTracking")));
+            this.PaletaModoClaro.ButtonSpecs.FormMax.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormMax.Image")));
+            this.PaletaModoClaro.ButtonSpecs.FormMax.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormMax.ImageStates.ImagePressed")));
+            this.PaletaModoClaro.ButtonSpecs.FormMax.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormMax.ImageStates.ImageTracking")));
+            this.PaletaModoClaro.ButtonSpecs.FormMin.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormMin.Image")));
+            this.PaletaModoClaro.ButtonSpecs.FormMin.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormMin.ImageStates.ImagePressed")));
+            this.PaletaModoClaro.ButtonSpecs.FormMin.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormMin.ImageStates.ImageTracking")));
+            this.PaletaModoClaro.ButtonSpecs.FormRestore.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormRestore.Image")));
+            this.PaletaModoClaro.ButtonSpecs.FormRestore.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormRestore.ImageStates.ImagePressed")));
+            this.PaletaModoClaro.ButtonSpecs.FormRestore.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoClaro.ButtonSpecs.FormRestore.ImageStates.ImageTracking")));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoClaro.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StatePressed.Border.Width = 0;
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoClaro.ButtonStyles.ButtonFormClose.StateTracking.Border.Width = 0;
+            this.PaletaModoClaro.Cargo.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.Cargo.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.Common.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.Common.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.Common.StateCommon.Back.ColorAngle = 45F;
+            this.PaletaModoClaro.ControlStyles.ControlGroupBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.ControlStyles.ControlGroupBox.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoClaro.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.PaletaModoClaro.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
+            this.PaletaModoClaro.GridStyles.GridCommon.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.GridStyles.GridCommon.StateCommon.Background.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.GridStyles.GridCommon.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.PaletaModoClaro.GridStyles.GridCommon.StateNormal.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.GridStyles.GridCommon.StateNormal.Background.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
+            this.PaletaModoClaro.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
+            this.PaletaModoClaro.InputControlStyles.InputControlStandalone.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoClaro.InputControlStyles.InputControlStandalone.StateActive.Border.Rounding = 0;
+            this.PaletaModoClaro.PanelStyles.PanelClient.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.PanelStyles.PanelClient.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.PanelStyles.PanelCommon.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.PanelStyles.PanelCommon.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.PanelStyles.PanelCustom1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.PaletaModoClaro.PanelStyles.PanelCustom1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             // 
-            // lblMaterias
+            // kpnlFullDock
             // 
-            this.lblMaterias.AutoSize = true;
-            this.lblMaterias.Location = new System.Drawing.Point(27, 497);
-            this.lblMaterias.Name = "lblMaterias";
-            this.lblMaterias.Size = new System.Drawing.Size(55, 17);
-            this.lblMaterias.TabIndex = 9;
-            this.lblMaterias.Text = "Materia";
+            this.kpnlFullDock.Controls.Add(this.kpnlMenu);
+            this.kpnlFullDock.Controls.Add(this.kpnlContenido);
+            this.kpnlFullDock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kpnlFullDock.Location = new System.Drawing.Point(0, 0);
+            this.kpnlFullDock.Name = "kpnlFullDock";
+            this.kpnlFullDock.Palette = this.PaletaModoClaro;
+            this.kpnlFullDock.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kpnlFullDock.Size = new System.Drawing.Size(1233, 558);
+            this.kpnlFullDock.TabIndex = 0;
             // 
-            // pboxMateria
+            // kpnlMenu
             // 
-            this.pboxMateria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxMateria.Image = ((System.Drawing.Image)(resources.GetObject("pboxMateria.Image")));
-            this.pboxMateria.Location = new System.Drawing.Point(7, 418);
-            this.pboxMateria.Name = "pboxMateria";
-            this.pboxMateria.Size = new System.Drawing.Size(100, 76);
-            this.pboxMateria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxMateria.TabIndex = 8;
-            this.pboxMateria.TabStop = false;
-            this.pboxMateria.Click += new System.EventHandler(this.pboxMateria_Click);
+            this.kpnlMenu.Controls.Add(this.kchkbModoClaroOscuro);
+            this.kpnlMenu.Controls.Add(this.kcmdMenuCerrar);
+            this.kpnlMenu.Controls.Add(this.kcmdMultitarea);
+            this.kpnlMenu.Controls.Add(this.kcmdMateria);
+            this.kpnlMenu.Controls.Add(this.kcmdDocente);
+            this.kpnlMenu.Controls.Add(this.kcmdUsuario);
+            this.kpnlMenu.Controls.Add(this.kcmdCerrarSesion);
+            this.kpnlMenu.Controls.Add(this.kcmdMenuAbrir);
+            this.kpnlMenu.Controls.Add(this.kcmdHorario);
+            this.kpnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.kpnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.kpnlMenu.Name = "kpnlMenu";
+            this.kpnlMenu.Palette = this.PaletaModoClaro;
+            this.kpnlMenu.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kpnlMenu.Size = new System.Drawing.Size(153, 558);
+            this.kpnlMenu.TabIndex = 0;
             // 
-            // lblDocente
+            // kchkbModoClaroOscuro
             // 
-            this.lblDocente.AutoSize = true;
-            this.lblDocente.Location = new System.Drawing.Point(21, 398);
-            this.lblDocente.Name = "lblDocente";
-            this.lblDocente.Size = new System.Drawing.Size(61, 17);
-            this.lblDocente.TabIndex = 7;
-            this.lblDocente.Text = "Docente";
+            this.kchkbModoClaroOscuro.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.kchkbModoClaroOscuro.Location = new System.Drawing.Point(12, 445);
+            this.kchkbModoClaroOscuro.Name = "kchkbModoClaroOscuro";
+            this.kchkbModoClaroOscuro.Palette = this.PaletaModoClaro;
+            this.kchkbModoClaroOscuro.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kchkbModoClaroOscuro.Size = new System.Drawing.Size(123, 24);
+            this.kchkbModoClaroOscuro.TabIndex = 7;
+            this.kchkbModoClaroOscuro.Values.Text = "Modo Oscuro";
+            this.kchkbModoClaroOscuro.CheckedChanged += new System.EventHandler(this.kchkbModoClaroOscuro_CheckedChanged);
+            this.kchkbModoClaroOscuro.CheckStateChanged += new System.EventHandler(this.kchkbModoClaroOscuro_CheckStateChanged);
             // 
-            // pboxDocente
+            // kcmdMenuCerrar
             // 
-            this.pboxDocente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxDocente.Image = ((System.Drawing.Image)(resources.GetObject("pboxDocente.Image")));
-            this.pboxDocente.Location = new System.Drawing.Point(7, 319);
-            this.pboxDocente.Name = "pboxDocente";
-            this.pboxDocente.Size = new System.Drawing.Size(100, 76);
-            this.pboxDocente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxDocente.TabIndex = 6;
-            this.pboxDocente.TabStop = false;
-            this.pboxDocente.Click += new System.EventHandler(this.pboxDocente_Click);
+            this.kcmdMenuCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdMenuCerrar.Location = new System.Drawing.Point(0, 3);
+            this.kcmdMenuCerrar.Name = "kcmdMenuCerrar";
+            this.kcmdMenuCerrar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuCerrar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuCerrar.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdMenuCerrar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuCerrar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuCerrar.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdMenuCerrar.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuCerrar.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMenuCerrar.OverrideDefault.Border.Rounding = 20;
+            this.kcmdMenuCerrar.OverrideDefault.Border.Width = 1;
+            this.kcmdMenuCerrar.Palette = this.PaletaModoClaro;
+            this.kcmdMenuCerrar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdMenuCerrar.Size = new System.Drawing.Size(151, 65);
+            this.kcmdMenuCerrar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuCerrar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuCerrar.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdMenuCerrar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuCerrar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuCerrar.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdMenuCerrar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuCerrar.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMenuCerrar.StateCommon.Border.Rounding = 20;
+            this.kcmdMenuCerrar.StateCommon.Border.Width = 1;
+            this.kcmdMenuCerrar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuCerrar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdMenuCerrar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdMenuCerrar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMenuCerrar.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdMenuCerrar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuCerrar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMenuCerrar.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdMenuCerrar.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuCerrar.StatePressed.Border.Rounding = 20;
+            this.kcmdMenuCerrar.StatePressed.Border.Width = 1;
+            this.kcmdMenuCerrar.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMenuCerrar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuCerrar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuCerrar.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdMenuCerrar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuCerrar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuCerrar.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdMenuCerrar.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuCerrar.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMenuCerrar.StateTracking.Border.Rounding = 20;
+            this.kcmdMenuCerrar.StateTracking.Border.Width = 1;
+            this.kcmdMenuCerrar.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMenuCerrar.TabIndex = 0;
+            this.kcmdMenuCerrar.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdMenuCerrar.Values.Image")));
+            this.kcmdMenuCerrar.Values.Text = "Contraer";
+            this.kcmdMenuCerrar.Click += new System.EventHandler(this.kcmdMenuCerrar_Click);
             // 
-            // lblUsuario
+            // kcmdMultitarea
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(25, 299);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(57, 17);
-            this.lblUsuario.TabIndex = 5;
-            this.lblUsuario.Text = "Usuario";
+            this.kcmdMultitarea.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdMultitarea.Location = new System.Drawing.Point(0, 358);
+            this.kcmdMultitarea.Name = "kcmdMultitarea";
+            this.kcmdMultitarea.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMultitarea.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMultitarea.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdMultitarea.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMultitarea.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMultitarea.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdMultitarea.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMultitarea.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMultitarea.OverrideDefault.Border.Rounding = 20;
+            this.kcmdMultitarea.OverrideDefault.Border.Width = 1;
+            this.kcmdMultitarea.Palette = this.PaletaModoClaro;
+            this.kcmdMultitarea.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdMultitarea.Size = new System.Drawing.Size(151, 65);
+            this.kcmdMultitarea.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMultitarea.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMultitarea.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdMultitarea.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMultitarea.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMultitarea.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdMultitarea.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMultitarea.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMultitarea.StateCommon.Border.Rounding = 20;
+            this.kcmdMultitarea.StateCommon.Border.Width = 1;
+            this.kcmdMultitarea.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMultitarea.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdMultitarea.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdMultitarea.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMultitarea.StateDisabled.Back.ColorAngle = 135F;
+            this.kcmdMultitarea.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMultitarea.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMultitarea.StateDisabled.Border.ColorAngle = 135F;
+            this.kcmdMultitarea.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMultitarea.StateDisabled.Border.Rounding = 20;
+            this.kcmdMultitarea.StateDisabled.Border.Width = 1;
+            this.kcmdMultitarea.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdMultitarea.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMultitarea.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdMultitarea.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMultitarea.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMultitarea.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdMultitarea.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMultitarea.StatePressed.Border.Rounding = 20;
+            this.kcmdMultitarea.StatePressed.Border.Width = 1;
+            this.kcmdMultitarea.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMultitarea.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMultitarea.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMultitarea.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdMultitarea.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMultitarea.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMultitarea.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdMultitarea.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMultitarea.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMultitarea.StateTracking.Border.Rounding = 20;
+            this.kcmdMultitarea.StateTracking.Border.Width = 1;
+            this.kcmdMultitarea.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMultitarea.TabIndex = 6;
+            this.kcmdMultitarea.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdMultitarea.Values.Image")));
+            this.kcmdMultitarea.Values.Text = "Multitarea";
+            this.kcmdMultitarea.Click += new System.EventHandler(this.pboxMultitarea_Click);
             // 
-            // pboxUsuario
+            // kcmdMateria
             // 
-            this.pboxUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pboxUsuario.Image")));
-            this.pboxUsuario.Location = new System.Drawing.Point(7, 220);
-            this.pboxUsuario.Name = "pboxUsuario";
-            this.pboxUsuario.Size = new System.Drawing.Size(100, 76);
-            this.pboxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxUsuario.TabIndex = 4;
-            this.pboxUsuario.TabStop = false;
-            this.pboxUsuario.Click += new System.EventHandler(this.pboxUsuario_Click);
+            this.kcmdMateria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdMateria.Location = new System.Drawing.Point(0, 287);
+            this.kcmdMateria.Name = "kcmdMateria";
+            this.kcmdMateria.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMateria.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMateria.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdMateria.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMateria.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMateria.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdMateria.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMateria.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMateria.OverrideDefault.Border.Rounding = 20;
+            this.kcmdMateria.OverrideDefault.Border.Width = 1;
+            this.kcmdMateria.Palette = this.PaletaModoClaro;
+            this.kcmdMateria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdMateria.Size = new System.Drawing.Size(151, 65);
+            this.kcmdMateria.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMateria.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMateria.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdMateria.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMateria.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMateria.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdMateria.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMateria.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMateria.StateCommon.Border.Rounding = 20;
+            this.kcmdMateria.StateCommon.Border.Width = 1;
+            this.kcmdMateria.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMateria.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdMateria.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdMateria.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMateria.StateDisabled.Back.ColorAngle = 135F;
+            this.kcmdMateria.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMateria.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMateria.StateDisabled.Border.ColorAngle = 135F;
+            this.kcmdMateria.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMateria.StateDisabled.Border.Rounding = 20;
+            this.kcmdMateria.StateDisabled.Border.Width = 1;
+            this.kcmdMateria.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdMateria.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMateria.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdMateria.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMateria.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMateria.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdMateria.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMateria.StatePressed.Border.Rounding = 20;
+            this.kcmdMateria.StatePressed.Border.Width = 1;
+            this.kcmdMateria.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMateria.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMateria.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMateria.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdMateria.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMateria.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMateria.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdMateria.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMateria.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMateria.StateTracking.Border.Rounding = 20;
+            this.kcmdMateria.StateTracking.Border.Width = 1;
+            this.kcmdMateria.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMateria.TabIndex = 5;
+            this.kcmdMateria.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdMateria.Values.Image")));
+            this.kcmdMateria.Values.Text = "Materia";
+            this.kcmdMateria.Click += new System.EventHandler(this.pboxMateria_Click);
             // 
-            // lblCalendario
+            // kcmdDocente
             // 
-            this.lblCalendario.AutoSize = true;
-            this.lblCalendario.Location = new System.Drawing.Point(17, 200);
-            this.lblCalendario.Name = "lblCalendario";
-            this.lblCalendario.Size = new System.Drawing.Size(76, 17);
-            this.lblCalendario.TabIndex = 3;
-            this.lblCalendario.Text = "Calendario";
+            this.kcmdDocente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdDocente.Location = new System.Drawing.Point(0, 216);
+            this.kcmdDocente.Name = "kcmdDocente";
+            this.kcmdDocente.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdDocente.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdDocente.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdDocente.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdDocente.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdDocente.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdDocente.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdDocente.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdDocente.OverrideDefault.Border.Rounding = 20;
+            this.kcmdDocente.OverrideDefault.Border.Width = 1;
+            this.kcmdDocente.Palette = this.PaletaModoClaro;
+            this.kcmdDocente.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdDocente.Size = new System.Drawing.Size(151, 65);
+            this.kcmdDocente.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdDocente.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdDocente.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdDocente.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdDocente.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdDocente.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdDocente.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdDocente.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdDocente.StateCommon.Border.Rounding = 20;
+            this.kcmdDocente.StateCommon.Border.Width = 1;
+            this.kcmdDocente.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdDocente.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdDocente.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdDocente.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdDocente.StateDisabled.Back.ColorAngle = 135F;
+            this.kcmdDocente.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdDocente.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdDocente.StateDisabled.Border.ColorAngle = 135F;
+            this.kcmdDocente.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdDocente.StateDisabled.Border.Rounding = 20;
+            this.kcmdDocente.StateDisabled.Border.Width = 1;
+            this.kcmdDocente.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kcmdDocente.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kcmdDocente.StateNormal.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdDocente.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdDocente.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdDocente.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdDocente.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdDocente.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdDocente.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdDocente.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdDocente.StatePressed.Border.Rounding = 20;
+            this.kcmdDocente.StatePressed.Border.Width = 1;
+            this.kcmdDocente.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdDocente.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdDocente.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdDocente.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdDocente.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdDocente.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdDocente.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdDocente.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdDocente.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdDocente.StateTracking.Border.Rounding = 20;
+            this.kcmdDocente.StateTracking.Border.Width = 1;
+            this.kcmdDocente.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdDocente.TabIndex = 4;
+            this.kcmdDocente.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdDocente.Values.Image")));
+            this.kcmdDocente.Values.Text = "Docente";
+            this.kcmdDocente.Click += new System.EventHandler(this.pboxDocente_Click);
             // 
-            // pboxCalendario
+            // kcmdUsuario
             // 
-            this.pboxCalendario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxCalendario.Image = ((System.Drawing.Image)(resources.GetObject("pboxCalendario.Image")));
-            this.pboxCalendario.Location = new System.Drawing.Point(7, 121);
-            this.pboxCalendario.Name = "pboxCalendario";
-            this.pboxCalendario.Size = new System.Drawing.Size(100, 76);
-            this.pboxCalendario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxCalendario.TabIndex = 2;
-            this.pboxCalendario.TabStop = false;
-            this.pboxCalendario.Click += new System.EventHandler(this.pboxCalendario_Click);
+            this.kcmdUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdUsuario.Location = new System.Drawing.Point(0, 145);
+            this.kcmdUsuario.Name = "kcmdUsuario";
+            this.kcmdUsuario.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdUsuario.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdUsuario.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdUsuario.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdUsuario.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdUsuario.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdUsuario.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdUsuario.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdUsuario.OverrideDefault.Border.Rounding = 20;
+            this.kcmdUsuario.OverrideDefault.Border.Width = 1;
+            this.kcmdUsuario.Palette = this.PaletaModoClaro;
+            this.kcmdUsuario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdUsuario.Size = new System.Drawing.Size(151, 65);
+            this.kcmdUsuario.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdUsuario.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdUsuario.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdUsuario.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdUsuario.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdUsuario.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdUsuario.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdUsuario.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdUsuario.StateCommon.Border.Rounding = 20;
+            this.kcmdUsuario.StateCommon.Border.Width = 1;
+            this.kcmdUsuario.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdUsuario.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdUsuario.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdUsuario.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdUsuario.StateDisabled.Back.ColorAngle = 135F;
+            this.kcmdUsuario.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdUsuario.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdUsuario.StateDisabled.Border.ColorAngle = 135F;
+            this.kcmdUsuario.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdUsuario.StateDisabled.Border.Rounding = 20;
+            this.kcmdUsuario.StateDisabled.Border.Width = 1;
+            this.kcmdUsuario.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdUsuario.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdUsuario.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdUsuario.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdUsuario.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdUsuario.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdUsuario.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdUsuario.StatePressed.Border.Rounding = 20;
+            this.kcmdUsuario.StatePressed.Border.Width = 1;
+            this.kcmdUsuario.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdUsuario.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdUsuario.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdUsuario.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdUsuario.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdUsuario.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdUsuario.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdUsuario.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdUsuario.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdUsuario.StateTracking.Border.Rounding = 20;
+            this.kcmdUsuario.StateTracking.Border.Width = 1;
+            this.kcmdUsuario.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdUsuario.TabIndex = 3;
+            this.kcmdUsuario.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdUsuario.Values.Image")));
+            this.kcmdUsuario.Values.Text = "Usuario";
+            this.kcmdUsuario.Click += new System.EventHandler(this.pboxUsuario_Click);
             // 
-            // lblHorario
+            // kcmdCerrarSesion
             // 
-            this.lblHorario.AutoSize = true;
-            this.lblHorario.Location = new System.Drawing.Point(27, 101);
-            this.lblHorario.Name = "lblHorario";
-            this.lblHorario.Size = new System.Drawing.Size(55, 17);
-            this.lblHorario.TabIndex = 1;
-            this.lblHorario.Text = "Horario";
+            this.kcmdCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kcmdCerrarSesion.Location = new System.Drawing.Point(0, 493);
+            this.kcmdCerrarSesion.Name = "kcmdCerrarSesion";
+            this.kcmdCerrarSesion.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdCerrarSesion.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdCerrarSesion.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdCerrarSesion.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdCerrarSesion.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdCerrarSesion.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdCerrarSesion.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdCerrarSesion.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdCerrarSesion.OverrideDefault.Border.Rounding = 20;
+            this.kcmdCerrarSesion.OverrideDefault.Border.Width = 1;
+            this.kcmdCerrarSesion.Palette = this.PaletaModoClaro;
+            this.kcmdCerrarSesion.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdCerrarSesion.Size = new System.Drawing.Size(153, 65);
+            this.kcmdCerrarSesion.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdCerrarSesion.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdCerrarSesion.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdCerrarSesion.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdCerrarSesion.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdCerrarSesion.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdCerrarSesion.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdCerrarSesion.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdCerrarSesion.StateCommon.Border.Rounding = 20;
+            this.kcmdCerrarSesion.StateCommon.Border.Width = 1;
+            this.kcmdCerrarSesion.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdCerrarSesion.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdCerrarSesion.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdCerrarSesion.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdCerrarSesion.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdCerrarSesion.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdCerrarSesion.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdCerrarSesion.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdCerrarSesion.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdCerrarSesion.StatePressed.Border.Rounding = 20;
+            this.kcmdCerrarSesion.StatePressed.Border.Width = 1;
+            this.kcmdCerrarSesion.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdCerrarSesion.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdCerrarSesion.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdCerrarSesion.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdCerrarSesion.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdCerrarSesion.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdCerrarSesion.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdCerrarSesion.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdCerrarSesion.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdCerrarSesion.StateTracking.Border.Rounding = 20;
+            this.kcmdCerrarSesion.StateTracking.Border.Width = 1;
+            this.kcmdCerrarSesion.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdCerrarSesion.TabIndex = 8;
+            this.kcmdCerrarSesion.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdCerrarSesion.Values.Image")));
+            this.kcmdCerrarSesion.Values.Text = "Cerrar \r\nSesión";
+            this.kcmdCerrarSesion.Click += new System.EventHandler(this.pboxCerrarSesión_Click);
             // 
-            // pboxHorario
+            // kcmdMenuAbrir
             // 
-            this.pboxHorario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxHorario.Image = ((System.Drawing.Image)(resources.GetObject("pboxHorario.Image")));
-            this.pboxHorario.Location = new System.Drawing.Point(7, 22);
-            this.pboxHorario.Name = "pboxHorario";
-            this.pboxHorario.Size = new System.Drawing.Size(100, 76);
-            this.pboxHorario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxHorario.TabIndex = 0;
-            this.pboxHorario.TabStop = false;
-            this.pboxHorario.Click += new System.EventHandler(this.pboxHorario_Click);
+            this.kcmdMenuAbrir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdMenuAbrir.Location = new System.Drawing.Point(0, 3);
+            this.kcmdMenuAbrir.Name = "kcmdMenuAbrir";
+            this.kcmdMenuAbrir.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuAbrir.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuAbrir.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdMenuAbrir.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuAbrir.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuAbrir.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdMenuAbrir.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuAbrir.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMenuAbrir.OverrideDefault.Border.Rounding = 20;
+            this.kcmdMenuAbrir.OverrideDefault.Border.Width = 1;
+            this.kcmdMenuAbrir.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kcmdMenuAbrir.Size = new System.Drawing.Size(151, 65);
+            this.kcmdMenuAbrir.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuAbrir.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdMenuAbrir.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdMenuAbrir.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuAbrir.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuAbrir.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdMenuAbrir.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuAbrir.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMenuAbrir.StateCommon.Border.Rounding = 20;
+            this.kcmdMenuAbrir.StateCommon.Border.Width = 1;
+            this.kcmdMenuAbrir.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuAbrir.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdMenuAbrir.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdMenuAbrir.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMenuAbrir.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdMenuAbrir.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuAbrir.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdMenuAbrir.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdMenuAbrir.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuAbrir.StatePressed.Border.Rounding = 20;
+            this.kcmdMenuAbrir.StatePressed.Border.Width = 1;
+            this.kcmdMenuAbrir.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMenuAbrir.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuAbrir.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuAbrir.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdMenuAbrir.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdMenuAbrir.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdMenuAbrir.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdMenuAbrir.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdMenuAbrir.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdMenuAbrir.StateTracking.Border.Rounding = 20;
+            this.kcmdMenuAbrir.StateTracking.Border.Width = 1;
+            this.kcmdMenuAbrir.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdMenuAbrir.TabIndex = 1;
+            this.kcmdMenuAbrir.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdMenuAbrir.Values.Image")));
+            this.kcmdMenuAbrir.Values.Text = "Menú";
+            this.kcmdMenuAbrir.Click += new System.EventHandler(this.kcmdMenuAbrir_Click);
             // 
-            // pnlEncabezado
+            // kcmdHorario
             // 
-            this.pnlEncabezado.BackColor = System.Drawing.SystemColors.Info;
-            this.pnlEncabezado.Controls.Add(this.pboxMinimizar);
-            this.pnlEncabezado.Controls.Add(this.pboxCerrar);
-            this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEncabezado.Location = new System.Drawing.Point(113, 0);
-            this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(1276, 30);
-            this.pnlEncabezado.TabIndex = 1;
+            this.kcmdHorario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdHorario.Location = new System.Drawing.Point(0, 74);
+            this.kcmdHorario.Name = "kcmdHorario";
+            this.kcmdHorario.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdHorario.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdHorario.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdHorario.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdHorario.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdHorario.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdHorario.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdHorario.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdHorario.OverrideDefault.Border.Rounding = 20;
+            this.kcmdHorario.OverrideDefault.Border.Width = 1;
+            this.kcmdHorario.Palette = this.PaletaModoClaro;
+            this.kcmdHorario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdHorario.Size = new System.Drawing.Size(151, 65);
+            this.kcmdHorario.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdHorario.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdHorario.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdHorario.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdHorario.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdHorario.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdHorario.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdHorario.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdHorario.StateCommon.Border.Rounding = 20;
+            this.kcmdHorario.StateCommon.Border.Width = 1;
+            this.kcmdHorario.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdHorario.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdHorario.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdHorario.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdHorario.StateDisabled.Back.ColorAngle = 135F;
+            this.kcmdHorario.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdHorario.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdHorario.StateDisabled.Border.ColorAngle = 135F;
+            this.kcmdHorario.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdHorario.StateDisabled.Border.Rounding = 20;
+            this.kcmdHorario.StateDisabled.Border.Width = 1;
+            this.kcmdHorario.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdHorario.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdHorario.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdHorario.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdHorario.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdHorario.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdHorario.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdHorario.StatePressed.Border.Rounding = 20;
+            this.kcmdHorario.StatePressed.Border.Width = 1;
+            this.kcmdHorario.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdHorario.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdHorario.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdHorario.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdHorario.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdHorario.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdHorario.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdHorario.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdHorario.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdHorario.StateTracking.Border.Rounding = 20;
+            this.kcmdHorario.StateTracking.Border.Width = 1;
+            this.kcmdHorario.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdHorario.TabIndex = 2;
+            this.kcmdHorario.Values.Image = ((System.Drawing.Image)(resources.GetObject("kcmdHorario.Values.Image")));
+            this.kcmdHorario.Values.Text = "Horario";
+            this.kcmdHorario.Click += new System.EventHandler(this.pboxHorario_Click);
             // 
-            // pboxMinimizar
+            // kpnlContenido
             // 
-            this.pboxMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pboxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pboxMinimizar.Image")));
-            this.pboxMinimizar.Location = new System.Drawing.Point(1212, 0);
-            this.pboxMinimizar.Name = "pboxMinimizar";
-            this.pboxMinimizar.Size = new System.Drawing.Size(32, 30);
-            this.pboxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pboxMinimizar.TabIndex = 22;
-            this.pboxMinimizar.TabStop = false;
-            this.pboxMinimizar.Click += new System.EventHandler(this.pboxMinimizar_Click);
+            this.kpnlContenido.Controls.Add(this.kpnlDocente);
+            this.kpnlContenido.Controls.Add(this.kpnlHorario);
+            this.kpnlContenido.Controls.Add(this.kpnlMateria);
+            this.kpnlContenido.Controls.Add(this.kpnlUsuario);
+            this.kpnlContenido.Location = new System.Drawing.Point(159, 3);
+            this.kpnlContenido.Name = "kpnlContenido";
+            this.kpnlContenido.Palette = this.PaletaModoClaro;
+            this.kpnlContenido.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kpnlContenido.Size = new System.Drawing.Size(1071, 552);
+            this.kpnlContenido.TabIndex = 0;
             // 
-            // pboxCerrar
+            // kpnlDocente
             // 
-            this.pboxCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxCerrar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pboxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pboxCerrar.Image")));
-            this.pboxCerrar.Location = new System.Drawing.Point(1244, 0);
-            this.pboxCerrar.Name = "pboxCerrar";
-            this.pboxCerrar.Size = new System.Drawing.Size(32, 30);
-            this.pboxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pboxCerrar.TabIndex = 21;
-            this.pboxCerrar.TabStop = false;
-            this.pboxCerrar.Click += new System.EventHandler(this.pboxCerrar_Click);
+            this.kpnlDocente.Controls.Add(this.kgboxDocente);
+            this.kpnlDocente.Location = new System.Drawing.Point(569, 190);
+            this.kpnlDocente.Name = "kpnlDocente";
+            this.kpnlDocente.Palette = this.PaletaModoClaro;
+            this.kpnlDocente.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kpnlDocente.Size = new System.Drawing.Size(499, 197);
+            this.kpnlDocente.TabIndex = 0;
             // 
-            // pnlHorario
+            // kgboxDocente
             // 
-            this.pnlHorario.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.pnlHorario.Controls.Add(this.gboxHorario);
-            this.pnlHorario.Location = new System.Drawing.Point(113, 36);
-            this.pnlHorario.Name = "pnlHorario";
-            this.pnlHorario.Size = new System.Drawing.Size(627, 361);
-            this.pnlHorario.TabIndex = 2;
+            this.kgboxDocente.AutoSize = true;
+            this.kgboxDocente.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kgboxDocente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kgboxDocente.Location = new System.Drawing.Point(0, 0);
+            this.kgboxDocente.Name = "kgboxDocente";
+            this.kgboxDocente.Palette = this.PaletaModoClaro;
+            this.kgboxDocente.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
-            // gboxHorario
+            // kgboxDocente.Panel
             // 
-            this.gboxHorario.Controls.Add(this.gboxSemana);
-            this.gboxHorario.Controls.Add(this.mnsHorario);
-            this.gboxHorario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gboxHorario.Location = new System.Drawing.Point(0, 0);
-            this.gboxHorario.Name = "gboxHorario";
-            this.gboxHorario.Size = new System.Drawing.Size(627, 361);
-            this.gboxHorario.TabIndex = 0;
-            this.gboxHorario.TabStop = false;
-            this.gboxHorario.Text = "Horario";
+            this.kgboxDocente.Panel.Controls.Add(this.kdgvDocente);
+            this.kgboxDocente.Panel.Controls.Add(this.kcmdAgregarDocente);
+            this.kgboxDocente.Panel.Controls.Add(this.kryptonDataGridView3);
+            this.kgboxDocente.Size = new System.Drawing.Size(499, 197);
+            this.kgboxDocente.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxDocente.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxDocente.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxDocente.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxDocente.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kgboxDocente.StateNormal.Border.Rounding = 20;
+            this.kgboxDocente.StateNormal.Border.Width = 1;
+            this.kgboxDocente.TabIndex = 0;
+            this.kgboxDocente.Values.Heading = "Docente";
             // 
-            // gboxSemana
+            // kdgvDocente
             // 
-            this.gboxSemana.Controls.Add(this.dgvHorario);
-            this.gboxSemana.Controls.Add(this.mnsSemana);
-            this.gboxSemana.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gboxSemana.Location = new System.Drawing.Point(3, 46);
-            this.gboxSemana.Name = "gboxSemana";
-            this.gboxSemana.Size = new System.Drawing.Size(621, 312);
-            this.gboxSemana.TabIndex = 1;
-            this.gboxSemana.TabStop = false;
-            this.gboxSemana.Text = "Semana";
+            this.kdgvDocente.AllowUserToAddRows = false;
+            this.kdgvDocente.AllowUserToDeleteRows = false;
+            this.kdgvDocente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kdgvDocente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.kdgvDocente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kdgvDocente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kdgvDocente.Location = new System.Drawing.Point(0, 0);
+            this.kdgvDocente.Name = "kdgvDocente";
+            this.kdgvDocente.Palette = this.PaletaModoClaro;
+            this.kdgvDocente.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kdgvDocente.RowHeadersWidth = 51;
+            this.kdgvDocente.RowTemplate.Height = 24;
+            this.kdgvDocente.Size = new System.Drawing.Size(485, 114);
+            this.kdgvDocente.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kdgvDocente.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kdgvDocente.StateCommon.DataCell.Border.Rounding = 20;
+            this.kdgvDocente.StateCommon.DataCell.Border.Width = 1;
+            this.kdgvDocente.TabIndex = 0;
+            this.kdgvDocente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kdgvDocente_CellDoubleClick);
             // 
-            // dgvHorario
+            // kcmdAgregarDocente
             // 
-            this.dgvHorario.AllowUserToResizeColumns = false;
-            this.dgvHorario.AllowUserToResizeRows = false;
-            this.dgvHorario.AutoGenerateColumns = false;
-            this.dgvHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHorario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Columna_Hora,
-            this.ColumnaMateria});
-            this.dgvHorario.DataSource = this.myScheduleDataSetBindingSource;
-            this.dgvHorario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHorario.Location = new System.Drawing.Point(3, 46);
-            this.dgvHorario.Name = "dgvHorario";
-            this.dgvHorario.RowHeadersWidth = 51;
-            this.dgvHorario.RowTemplate.Height = 24;
-            this.dgvHorario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvHorario.Size = new System.Drawing.Size(615, 263);
-            this.dgvHorario.TabIndex = 1;
+            this.kcmdAgregarDocente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdAgregarDocente.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kcmdAgregarDocente.Location = new System.Drawing.Point(0, 114);
+            this.kcmdAgregarDocente.Name = "kcmdAgregarDocente";
+            this.kcmdAgregarDocente.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdAgregarDocente.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdAgregarDocente.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdAgregarDocente.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdAgregarDocente.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdAgregarDocente.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdAgregarDocente.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdAgregarDocente.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdAgregarDocente.OverrideDefault.Border.Rounding = 20;
+            this.kcmdAgregarDocente.OverrideDefault.Border.Width = 1;
+            this.kcmdAgregarDocente.Palette = this.PaletaModoClaro;
+            this.kcmdAgregarDocente.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdAgregarDocente.Size = new System.Drawing.Size(485, 41);
+            this.kcmdAgregarDocente.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdAgregarDocente.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdAgregarDocente.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdAgregarDocente.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdAgregarDocente.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdAgregarDocente.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdAgregarDocente.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdAgregarDocente.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdAgregarDocente.StateCommon.Border.Rounding = 20;
+            this.kcmdAgregarDocente.StateCommon.Border.Width = 1;
+            this.kcmdAgregarDocente.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdAgregarDocente.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdAgregarDocente.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdAgregarDocente.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdAgregarDocente.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdAgregarDocente.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdAgregarDocente.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdAgregarDocente.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdAgregarDocente.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdAgregarDocente.StatePressed.Border.Rounding = 20;
+            this.kcmdAgregarDocente.StatePressed.Border.Width = 1;
+            this.kcmdAgregarDocente.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdAgregarDocente.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdAgregarDocente.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdAgregarDocente.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdAgregarDocente.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdAgregarDocente.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdAgregarDocente.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdAgregarDocente.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdAgregarDocente.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdAgregarDocente.StateTracking.Border.Rounding = 20;
+            this.kcmdAgregarDocente.StateTracking.Border.Width = 1;
+            this.kcmdAgregarDocente.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdAgregarDocente.TabIndex = 9;
+            this.kcmdAgregarDocente.Values.Text = "Agregar docente";
+            this.kcmdAgregarDocente.Click += new System.EventHandler(this.cmdAgregarDocente_Click);
             // 
-            // Columna_Hora
+            // kryptonDataGridView3
             // 
-            this.Columna_Hora.HeaderText = "Hora";
-            this.Columna_Hora.MinimumWidth = 6;
-            this.Columna_Hora.Name = "Columna_Hora";
-            this.Columna_Hora.ReadOnly = true;
-            this.Columna_Hora.Width = 68;
+            this.kryptonDataGridView3.AllowUserToAddRows = false;
+            this.kryptonDataGridView3.AllowUserToDeleteRows = false;
+            this.kryptonDataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kryptonDataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.kryptonDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kryptonDataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonDataGridView3.Location = new System.Drawing.Point(0, 0);
+            this.kryptonDataGridView3.Name = "kryptonDataGridView3";
+            this.kryptonDataGridView3.Palette = this.PaletaModoClaro;
+            this.kryptonDataGridView3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonDataGridView3.RowHeadersWidth = 51;
+            this.kryptonDataGridView3.RowTemplate.Height = 24;
+            this.kryptonDataGridView3.Size = new System.Drawing.Size(485, 155);
+            this.kryptonDataGridView3.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonDataGridView3.StateCommon.Background.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonDataGridView3.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kryptonDataGridView3.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonDataGridView3.StateCommon.DataCell.Border.Rounding = 20;
+            this.kryptonDataGridView3.StateCommon.DataCell.Border.Width = 1;
+            this.kryptonDataGridView3.StateNormal.HeaderRow.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonDataGridView3.TabIndex = 0;
             // 
-            // ColumnaMateria
+            // kpnlHorario
             // 
-            this.ColumnaMateria.HeaderText = "Materia";
-            this.ColumnaMateria.MinimumWidth = 6;
-            this.ColumnaMateria.Name = "ColumnaMateria";
-            this.ColumnaMateria.Width = 84;
+            this.kpnlHorario.Controls.Add(this.kgboxHorario);
+            this.kpnlHorario.Location = new System.Drawing.Point(3, 3);
+            this.kpnlHorario.Name = "kpnlHorario";
+            this.kpnlHorario.Palette = this.PaletaModoClaro;
+            this.kpnlHorario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kpnlHorario.Size = new System.Drawing.Size(560, 546);
+            this.kpnlHorario.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kpnlHorario.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kpnlHorario.TabIndex = 0;
+            // 
+            // kgboxHorario
+            // 
+            this.kgboxHorario.AutoSize = true;
+            this.kgboxHorario.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kgboxHorario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kgboxHorario.Location = new System.Drawing.Point(0, 0);
+            this.kgboxHorario.Name = "kgboxHorario";
+            this.kgboxHorario.Palette = this.PaletaModoClaro;
+            this.kgboxHorario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            // 
+            // kgboxHorario.Panel
+            // 
+            this.kgboxHorario.Panel.Controls.Add(this.kgboxSemana);
+            this.kgboxHorario.Panel.Controls.Add(this.kmnsHorario);
+            this.kgboxHorario.Size = new System.Drawing.Size(560, 546);
+            this.kgboxHorario.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxHorario.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxHorario.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kgboxHorario.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kgboxHorario.StateCommon.Border.Rounding = 10;
+            this.kgboxHorario.TabIndex = 0;
+            this.kgboxHorario.Values.Heading = "Horario";
+            // 
+            // kgboxSemana
+            // 
+            this.kgboxSemana.AutoSize = true;
+            this.kgboxSemana.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kgboxSemana.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kgboxSemana.Location = new System.Drawing.Point(0, 38);
+            this.kgboxSemana.Name = "kgboxSemana";
+            this.kgboxSemana.Palette = this.PaletaModoClaro;
+            this.kgboxSemana.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            // 
+            // kgboxSemana.Panel
+            // 
+            this.kgboxSemana.Panel.Controls.Add(this.kdgvHorario);
+            this.kgboxSemana.Panel.Controls.Add(this.kmnsSemana);
+            this.kgboxSemana.Size = new System.Drawing.Size(552, 469);
+            this.kgboxSemana.StateCommon.Back.Color1 = System.Drawing.Color.DimGray;
+            this.kgboxSemana.StateCommon.Back.Color2 = System.Drawing.Color.DimGray;
+            this.kgboxSemana.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxSemana.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxSemana.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kgboxSemana.StateNormal.Border.Rounding = 20;
+            this.kgboxSemana.StateNormal.Border.Width = 1;
+            this.kgboxSemana.TabIndex = 0;
+            this.kgboxSemana.Values.Heading = "Semana";
+            // 
+            // kdgvHorario
+            // 
+            this.kdgvHorario.AllowUserToAddRows = false;
+            this.kdgvHorario.AllowUserToDeleteRows = false;
+            this.kdgvHorario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kdgvHorario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.kdgvHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kdgvHorario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kdgvHorario.Location = new System.Drawing.Point(0, 25);
+            this.kdgvHorario.Name = "kdgvHorario";
+            this.kdgvHorario.Palette = this.PaletaModoClaro;
+            this.kdgvHorario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kdgvHorario.RowHeadersWidth = 51;
+            this.kdgvHorario.RowTemplate.Height = 24;
+            this.kdgvHorario.Size = new System.Drawing.Size(538, 402);
+            this.kdgvHorario.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kdgvHorario.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kdgvHorario.TabIndex = 0;
+            this.kdgvHorario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorario_CellDoubleClick);
+            // 
+            // kmnsSemana
+            // 
+            this.kmnsSemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kmnsSemana.Font = new System.Drawing.Font("Mongolian Baiti", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kmnsSemana.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.kmnsSemana.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.kmnsSemana.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ktsmLunes,
+            this.ktsmMartes,
+            this.ktsmMiércoles,
+            this.ktsmJueves,
+            this.ktsmViernes,
+            this.ktsmSábado,
+            this.ktsmDomingo});
+            this.kmnsSemana.Location = new System.Drawing.Point(0, 0);
+            this.kmnsSemana.Name = "kmnsSemana";
+            this.kmnsSemana.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.kmnsSemana.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.kmnsSemana.Size = new System.Drawing.Size(538, 25);
+            this.kmnsSemana.TabIndex = 0;
+            this.kmnsSemana.Text = "Horario";
+            // 
+            // ktsmLunes
+            // 
+            this.ktsmLunes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ktsmLunes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmLunes.Name = "ktsmLunes";
+            this.ktsmLunes.Size = new System.Drawing.Size(60, 19);
+            this.ktsmLunes.Text = "Lunes";
+            this.ktsmLunes.Click += new System.EventHandler(this.tsmLunes_Click);
+            // 
+            // ktsmMartes
+            // 
+            this.ktsmMartes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ktsmMartes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmMartes.Name = "ktsmMartes";
+            this.ktsmMartes.Size = new System.Drawing.Size(65, 19);
+            this.ktsmMartes.Text = "Martes";
+            this.ktsmMartes.Click += new System.EventHandler(this.tsmMartes_Click);
+            // 
+            // ktsmMiércoles
+            // 
+            this.ktsmMiércoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ktsmMiércoles.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmMiércoles.Name = "ktsmMiércoles";
+            this.ktsmMiércoles.Size = new System.Drawing.Size(85, 19);
+            this.ktsmMiércoles.Text = "Miércoles";
+            this.ktsmMiércoles.Click += new System.EventHandler(this.tsmMiércoles_Click);
+            // 
+            // ktsmJueves
+            // 
+            this.ktsmJueves.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmJueves.Name = "ktsmJueves";
+            this.ktsmJueves.Size = new System.Drawing.Size(63, 19);
+            this.ktsmJueves.Text = "Jueves";
+            this.ktsmJueves.Click += new System.EventHandler(this.tsmJueves_Click);
+            // 
+            // ktsmViernes
+            // 
+            this.ktsmViernes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmViernes.Name = "ktsmViernes";
+            this.ktsmViernes.Size = new System.Drawing.Size(71, 19);
+            this.ktsmViernes.Text = "Viernes";
+            this.ktsmViernes.Click += new System.EventHandler(this.tsmViernes_Click);
+            // 
+            // ktsmSábado
+            // 
+            this.ktsmSábado.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmSábado.Name = "ktsmSábado";
+            this.ktsmSábado.Size = new System.Drawing.Size(68, 19);
+            this.ktsmSábado.Text = "Sábado";
+            this.ktsmSábado.Click += new System.EventHandler(this.tsmSábado_Click);
+            // 
+            // ktsmDomingo
+            // 
+            this.ktsmDomingo.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmDomingo.Name = "ktsmDomingo";
+            this.ktsmDomingo.Size = new System.Drawing.Size(81, 19);
+            this.ktsmDomingo.Text = "Domingo";
+            this.ktsmDomingo.Click += new System.EventHandler(this.tsmDomingo_Click);
+            // 
+            // kmnsHorario
+            // 
+            this.kmnsHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kmnsHorario.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kmnsHorario.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.kmnsHorario.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.kmnsHorario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ktsmHorario1,
+            this.ktsmHorario2,
+            this.ktsmHorario3});
+            this.kmnsHorario.Location = new System.Drawing.Point(0, 0);
+            this.kmnsHorario.Name = "kmnsHorario";
+            this.kmnsHorario.Padding = new System.Windows.Forms.Padding(9, 8, 0, 10);
+            this.kmnsHorario.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.kmnsHorario.Size = new System.Drawing.Size(552, 38);
+            this.kmnsHorario.TabIndex = 0;
+            this.kmnsHorario.Text = "Horario";
+            // 
+            // ktsmHorario1
+            // 
+            this.ktsmHorario1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ktsmHorario1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmHorario1.Name = "ktsmHorario1";
+            this.ktsmHorario1.Size = new System.Drawing.Size(91, 24);
+            this.ktsmHorario1.Text = "Horario 1";
+            this.ktsmHorario1.Click += new System.EventHandler(this.tsmHorario1_Click);
+            // 
+            // ktsmHorario2
+            // 
+            this.ktsmHorario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ktsmHorario2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmHorario2.Name = "ktsmHorario2";
+            this.ktsmHorario2.Size = new System.Drawing.Size(89, 24);
+            this.ktsmHorario2.Text = "Horario 2";
+            this.ktsmHorario2.Click += new System.EventHandler(this.tsmHorario2_Click);
+            // 
+            // ktsmHorario3
+            // 
+            this.ktsmHorario3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ktsmHorario3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ktsmHorario3.Name = "ktsmHorario3";
+            this.ktsmHorario3.Size = new System.Drawing.Size(89, 24);
+            this.ktsmHorario3.Text = "Horario 3";
+            this.ktsmHorario3.Click += new System.EventHandler(this.tsmHorario3_Click);
+            // 
+            // kpnlMateria
+            // 
+            this.kpnlMateria.Controls.Add(this.kgboxMateria);
+            this.kpnlMateria.Location = new System.Drawing.Point(569, 9);
+            this.kpnlMateria.Name = "kpnlMateria";
+            this.kpnlMateria.Palette = this.PaletaModoClaro;
+            this.kpnlMateria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kpnlMateria.Size = new System.Drawing.Size(499, 175);
+            this.kpnlMateria.TabIndex = 29;
+            // 
+            // kgboxMateria
+            // 
+            this.kgboxMateria.AutoSize = true;
+            this.kgboxMateria.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kgboxMateria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kgboxMateria.Location = new System.Drawing.Point(0, 0);
+            this.kgboxMateria.Name = "kgboxMateria";
+            this.kgboxMateria.Palette = this.PaletaModoClaro;
+            this.kgboxMateria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            // 
+            // kgboxMateria.Panel
+            // 
+            this.kgboxMateria.Panel.Controls.Add(this.kdgvMateria);
+            this.kgboxMateria.Panel.Controls.Add(this.kryptonDataGridView1);
+            this.kgboxMateria.Size = new System.Drawing.Size(499, 175);
+            this.kgboxMateria.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxMateria.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxMateria.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxMateria.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxMateria.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kgboxMateria.StateNormal.Border.Rounding = 20;
+            this.kgboxMateria.StateNormal.Border.Width = 1;
+            this.kgboxMateria.TabIndex = 0;
+            this.kgboxMateria.Values.Heading = "Materia";
+            // 
+            // kdgvMateria
+            // 
+            this.kdgvMateria.AllowUserToAddRows = false;
+            this.kdgvMateria.AllowUserToDeleteRows = false;
+            this.kdgvMateria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kdgvMateria.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.kdgvMateria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kdgvMateria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kdgvMateria.Location = new System.Drawing.Point(0, 0);
+            this.kdgvMateria.Name = "kdgvMateria";
+            this.kdgvMateria.Palette = this.PaletaModoClaro;
+            this.kdgvMateria.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kdgvMateria.RowHeadersWidth = 51;
+            this.kdgvMateria.RowTemplate.Height = 24;
+            this.kdgvMateria.Size = new System.Drawing.Size(485, 133);
+            this.kdgvMateria.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kdgvMateria.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kdgvMateria.StateCommon.DataCell.Border.Rounding = 20;
+            this.kdgvMateria.StateCommon.DataCell.Border.Width = 1;
+            this.kdgvMateria.TabIndex = 0;
+            // 
+            // kryptonDataGridView1
+            // 
+            this.kryptonDataGridView1.AllowUserToAddRows = false;
+            this.kryptonDataGridView1.AllowUserToDeleteRows = false;
+            this.kryptonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kryptonDataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kryptonDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.Palette = this.PaletaModoClaro;
+            this.kryptonDataGridView1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonDataGridView1.RowHeadersWidth = 51;
+            this.kryptonDataGridView1.RowTemplate.Height = 24;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(485, 133);
+            this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonDataGridView1.StateCommon.Background.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kryptonDataGridView1.StateCommon.DataCell.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonDataGridView1.StateCommon.DataCell.Border.Rounding = 20;
+            this.kryptonDataGridView1.StateCommon.DataCell.Border.Width = 1;
+            this.kryptonDataGridView1.StateNormal.HeaderRow.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonDataGridView1.TabIndex = 0;
+            // 
+            // kpnlUsuario
+            // 
+            this.kpnlUsuario.Controls.Add(this.kgboxUsuario);
+            this.kpnlUsuario.Location = new System.Drawing.Point(569, 393);
+            this.kpnlUsuario.Name = "kpnlUsuario";
+            this.kpnlUsuario.Palette = this.PaletaModoClaro;
+            this.kpnlUsuario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kpnlUsuario.Size = new System.Drawing.Size(499, 156);
+            this.kpnlUsuario.TabIndex = 0;
+            // 
+            // kgboxUsuario
+            // 
+            this.kgboxUsuario.AutoSize = true;
+            this.kgboxUsuario.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kgboxUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kgboxUsuario.Location = new System.Drawing.Point(0, 0);
+            this.kgboxUsuario.Name = "kgboxUsuario";
+            this.kgboxUsuario.Palette = this.PaletaModoClaro;
+            this.kgboxUsuario.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            // 
+            // kgboxUsuario.Panel
+            // 
+            this.kgboxUsuario.Panel.Controls.Add(this.kcmdEditarContraseña);
+            this.kgboxUsuario.Panel.Controls.Add(this.kcmdEditarApellido);
+            this.kgboxUsuario.Panel.Controls.Add(this.kcmdEditarCorreo);
+            this.kgboxUsuario.Panel.Controls.Add(this.kcmdEditarNombre);
+            this.kgboxUsuario.Panel.Controls.Add(this.ktxtContraseña);
+            this.kgboxUsuario.Panel.Controls.Add(this.ktxtApellido);
+            this.kgboxUsuario.Panel.Controls.Add(this.ktxtCorreo);
+            this.kgboxUsuario.Panel.Controls.Add(this.ktxtNombre);
+            this.kgboxUsuario.Size = new System.Drawing.Size(499, 156);
+            this.kgboxUsuario.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxUsuario.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxUsuario.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxUsuario.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kgboxUsuario.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kgboxUsuario.StateNormal.Border.Rounding = 20;
+            this.kgboxUsuario.StateNormal.Border.Width = 1;
+            this.kgboxUsuario.TabIndex = 0;
+            this.kgboxUsuario.Values.Heading = "Usuario";
+            // 
+            // kcmdEditarContraseña
+            // 
+            this.kcmdEditarContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdEditarContraseña.Location = new System.Drawing.Point(447, 62);
+            this.kcmdEditarContraseña.Name = "kcmdEditarContraseña";
+            this.kcmdEditarContraseña.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarContraseña.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarContraseña.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdEditarContraseña.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarContraseña.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarContraseña.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdEditarContraseña.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarContraseña.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarContraseña.OverrideDefault.Border.Rounding = 20;
+            this.kcmdEditarContraseña.OverrideDefault.Border.Width = 1;
+            this.kcmdEditarContraseña.Palette = this.PaletaModoClaro;
+            this.kcmdEditarContraseña.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdEditarContraseña.Size = new System.Drawing.Size(35, 35);
+            this.kcmdEditarContraseña.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarContraseña.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarContraseña.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdEditarContraseña.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("kcmdEditarContraseña.StateCommon.Back.Image")));
+            this.kcmdEditarContraseña.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.kcmdEditarContraseña.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarContraseña.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarContraseña.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdEditarContraseña.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarContraseña.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarContraseña.StateCommon.Border.Rounding = 20;
+            this.kcmdEditarContraseña.StateCommon.Border.Width = 1;
+            this.kcmdEditarContraseña.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarContraseña.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdEditarContraseña.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdEditarContraseña.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarContraseña.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdEditarContraseña.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarContraseña.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarContraseña.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdEditarContraseña.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarContraseña.StatePressed.Border.Rounding = 20;
+            this.kcmdEditarContraseña.StatePressed.Border.Width = 1;
+            this.kcmdEditarContraseña.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarContraseña.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarContraseña.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarContraseña.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdEditarContraseña.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarContraseña.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarContraseña.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdEditarContraseña.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarContraseña.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarContraseña.StateTracking.Border.Rounding = 20;
+            this.kcmdEditarContraseña.StateTracking.Border.Width = 1;
+            this.kcmdEditarContraseña.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarContraseña.TabIndex = 13;
+            this.kcmdEditarContraseña.Values.Text = "";
+            this.kcmdEditarContraseña.Click += new System.EventHandler(this.cmdEditarContraseña_Click);
+            // 
+            // kcmdEditarApellido
+            // 
+            this.kcmdEditarApellido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdEditarApellido.Location = new System.Drawing.Point(201, 62);
+            this.kcmdEditarApellido.Name = "kcmdEditarApellido";
+            this.kcmdEditarApellido.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarApellido.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarApellido.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdEditarApellido.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarApellido.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarApellido.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdEditarApellido.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarApellido.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarApellido.OverrideDefault.Border.Rounding = 20;
+            this.kcmdEditarApellido.OverrideDefault.Border.Width = 1;
+            this.kcmdEditarApellido.Palette = this.PaletaModoClaro;
+            this.kcmdEditarApellido.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdEditarApellido.Size = new System.Drawing.Size(35, 35);
+            this.kcmdEditarApellido.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarApellido.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarApellido.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdEditarApellido.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("kcmdEditarApellido.StateCommon.Back.Image")));
+            this.kcmdEditarApellido.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.kcmdEditarApellido.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarApellido.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarApellido.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdEditarApellido.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarApellido.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarApellido.StateCommon.Border.Rounding = 20;
+            this.kcmdEditarApellido.StateCommon.Border.Width = 1;
+            this.kcmdEditarApellido.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarApellido.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdEditarApellido.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdEditarApellido.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarApellido.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdEditarApellido.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarApellido.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarApellido.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdEditarApellido.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarApellido.StatePressed.Border.Rounding = 20;
+            this.kcmdEditarApellido.StatePressed.Border.Width = 1;
+            this.kcmdEditarApellido.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarApellido.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarApellido.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarApellido.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdEditarApellido.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarApellido.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarApellido.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdEditarApellido.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarApellido.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarApellido.StateTracking.Border.Rounding = 20;
+            this.kcmdEditarApellido.StateTracking.Border.Width = 1;
+            this.kcmdEditarApellido.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarApellido.TabIndex = 12;
+            this.kcmdEditarApellido.Values.Text = "";
+            this.kcmdEditarApellido.Click += new System.EventHandler(this.cmdEditarApellido_Click);
+            // 
+            // kcmdEditarCorreo
+            // 
+            this.kcmdEditarCorreo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdEditarCorreo.Location = new System.Drawing.Point(447, 3);
+            this.kcmdEditarCorreo.Name = "kcmdEditarCorreo";
+            this.kcmdEditarCorreo.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarCorreo.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarCorreo.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdEditarCorreo.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarCorreo.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarCorreo.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdEditarCorreo.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarCorreo.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarCorreo.OverrideDefault.Border.Rounding = 20;
+            this.kcmdEditarCorreo.OverrideDefault.Border.Width = 1;
+            this.kcmdEditarCorreo.Palette = this.PaletaModoClaro;
+            this.kcmdEditarCorreo.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdEditarCorreo.Size = new System.Drawing.Size(35, 35);
+            this.kcmdEditarCorreo.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarCorreo.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarCorreo.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdEditarCorreo.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("kcmdEditarCorreo.StateCommon.Back.Image")));
+            this.kcmdEditarCorreo.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.kcmdEditarCorreo.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarCorreo.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarCorreo.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdEditarCorreo.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarCorreo.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarCorreo.StateCommon.Border.Rounding = 20;
+            this.kcmdEditarCorreo.StateCommon.Border.Width = 1;
+            this.kcmdEditarCorreo.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarCorreo.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdEditarCorreo.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdEditarCorreo.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarCorreo.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdEditarCorreo.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarCorreo.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarCorreo.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdEditarCorreo.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarCorreo.StatePressed.Border.Rounding = 20;
+            this.kcmdEditarCorreo.StatePressed.Border.Width = 1;
+            this.kcmdEditarCorreo.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarCorreo.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarCorreo.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarCorreo.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdEditarCorreo.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarCorreo.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarCorreo.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdEditarCorreo.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarCorreo.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarCorreo.StateTracking.Border.Rounding = 20;
+            this.kcmdEditarCorreo.StateTracking.Border.Width = 1;
+            this.kcmdEditarCorreo.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarCorreo.TabIndex = 11;
+            this.kcmdEditarCorreo.Values.Text = "";
+            this.kcmdEditarCorreo.Click += new System.EventHandler(this.cmdEditarCorreo_Click);
+            // 
+            // kcmdEditarNombre
+            // 
+            this.kcmdEditarNombre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kcmdEditarNombre.Location = new System.Drawing.Point(201, 3);
+            this.kcmdEditarNombre.Name = "kcmdEditarNombre";
+            this.kcmdEditarNombre.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarNombre.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarNombre.OverrideDefault.Back.ColorAngle = 45F;
+            this.kcmdEditarNombre.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarNombre.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarNombre.OverrideDefault.Border.ColorAngle = 45F;
+            this.kcmdEditarNombre.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarNombre.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarNombre.OverrideDefault.Border.Rounding = 20;
+            this.kcmdEditarNombre.OverrideDefault.Border.Width = 1;
+            this.kcmdEditarNombre.Palette = this.PaletaModoClaro;
+            this.kcmdEditarNombre.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kcmdEditarNombre.Size = new System.Drawing.Size(35, 35);
+            this.kcmdEditarNombre.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarNombre.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kcmdEditarNombre.StateCommon.Back.ColorAngle = 45F;
+            this.kcmdEditarNombre.StateCommon.Back.Image = ((System.Drawing.Image)(resources.GetObject("kcmdEditarNombre.StateCommon.Back.Image")));
+            this.kcmdEditarNombre.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.kcmdEditarNombre.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarNombre.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarNombre.StateCommon.Border.ColorAngle = 45F;
+            this.kcmdEditarNombre.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarNombre.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarNombre.StateCommon.Border.Rounding = 20;
+            this.kcmdEditarNombre.StateCommon.Border.Width = 1;
+            this.kcmdEditarNombre.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarNombre.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmdEditarNombre.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.kcmdEditarNombre.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarNombre.StatePressed.Back.ColorAngle = 135F;
+            this.kcmdEditarNombre.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarNombre.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.kcmdEditarNombre.StatePressed.Border.ColorAngle = 135F;
+            this.kcmdEditarNombre.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarNombre.StatePressed.Border.Rounding = 20;
+            this.kcmdEditarNombre.StatePressed.Border.Width = 1;
+            this.kcmdEditarNombre.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarNombre.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarNombre.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarNombre.StateTracking.Back.ColorAngle = 45F;
+            this.kcmdEditarNombre.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kcmdEditarNombre.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kcmdEditarNombre.StateTracking.Border.ColorAngle = 45F;
+            this.kcmdEditarNombre.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kcmdEditarNombre.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kcmdEditarNombre.StateTracking.Border.Rounding = 20;
+            this.kcmdEditarNombre.StateTracking.Border.Width = 1;
+            this.kcmdEditarNombre.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kcmdEditarNombre.TabIndex = 10;
+            this.kcmdEditarNombre.Values.Text = "";
+            this.kcmdEditarNombre.Click += new System.EventHandler(this.cmdEditarNombre_Click);
+            // 
+            // ktxtContraseña
+            // 
+            this.ktxtContraseña.Enabled = false;
+            this.ktxtContraseña.Location = new System.Drawing.Point(249, 62);
+            this.ktxtContraseña.Name = "ktxtContraseña";
+            this.ktxtContraseña.Palette = this.PaletaModoClaro;
+            this.ktxtContraseña.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.ktxtContraseña.Size = new System.Drawing.Size(192, 35);
+            this.ktxtContraseña.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtContraseña.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.ktxtContraseña.StateCommon.Border.Rounding = 20;
+            this.ktxtContraseña.StateCommon.Border.Width = 1;
+            this.ktxtContraseña.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.ktxtContraseña.StateCommon.Content.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtContraseña.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ktxtContraseña.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtContraseña.StateNormal.Border.Rounding = 20;
+            this.ktxtContraseña.StateNormal.Border.Width = 1;
+            this.ktxtContraseña.TabIndex = 0;
+            this.ktxtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
+            // 
+            // ktxtApellido
+            // 
+            this.ktxtApellido.Enabled = false;
+            this.ktxtApellido.Location = new System.Drawing.Point(3, 62);
+            this.ktxtApellido.Name = "ktxtApellido";
+            this.ktxtApellido.Palette = this.PaletaModoClaro;
+            this.ktxtApellido.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.ktxtApellido.Size = new System.Drawing.Size(192, 35);
+            this.ktxtApellido.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtApellido.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.ktxtApellido.StateCommon.Border.Rounding = 20;
+            this.ktxtApellido.StateCommon.Border.Width = 1;
+            this.ktxtApellido.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.ktxtApellido.StateCommon.Content.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtApellido.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ktxtApellido.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtApellido.StateNormal.Border.Rounding = 20;
+            this.ktxtApellido.StateNormal.Border.Width = 1;
+            this.ktxtApellido.TabIndex = 0;
+            this.ktxtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
+            // 
+            // ktxtCorreo
+            // 
+            this.ktxtCorreo.Enabled = false;
+            this.ktxtCorreo.Location = new System.Drawing.Point(249, 3);
+            this.ktxtCorreo.Name = "ktxtCorreo";
+            this.ktxtCorreo.Palette = this.PaletaModoClaro;
+            this.ktxtCorreo.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.ktxtCorreo.Size = new System.Drawing.Size(192, 35);
+            this.ktxtCorreo.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtCorreo.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.ktxtCorreo.StateCommon.Border.Rounding = 20;
+            this.ktxtCorreo.StateCommon.Border.Width = 1;
+            this.ktxtCorreo.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.ktxtCorreo.StateCommon.Content.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtCorreo.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ktxtCorreo.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtCorreo.StateNormal.Border.Rounding = 20;
+            this.ktxtCorreo.StateNormal.Border.Width = 1;
+            this.ktxtCorreo.TabIndex = 0;
+            this.ktxtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
+            // 
+            // ktxtNombre
+            // 
+            this.ktxtNombre.Enabled = false;
+            this.ktxtNombre.Location = new System.Drawing.Point(3, 3);
+            this.ktxtNombre.Name = "ktxtNombre";
+            this.ktxtNombre.Palette = this.PaletaModoClaro;
+            this.ktxtNombre.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.ktxtNombre.Size = new System.Drawing.Size(192, 35);
+            this.ktxtNombre.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtNombre.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.ktxtNombre.StateCommon.Border.Rounding = 20;
+            this.ktxtNombre.StateCommon.Border.Width = 1;
+            this.ktxtNombre.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.ktxtNombre.StateCommon.Content.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtNombre.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ktxtNombre.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ktxtNombre.StateNormal.Border.Rounding = 20;
+            this.ktxtNombre.StateNormal.Border.Width = 1;
+            this.ktxtNombre.TabIndex = 0;
+            this.ktxtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
+            // 
+            // PaletaModoOscuro
+            // 
+            this.PaletaModoOscuro.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
+            this.PaletaModoOscuro.BaseRenderMode = ComponentFactory.Krypton.Toolkit.RendererMode.Sparkle;
+            this.PaletaModoOscuro.ButtonSpecs.FormClose.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormClose.Image")));
+            this.PaletaModoOscuro.ButtonSpecs.FormClose.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormClose.ImageStates.ImagePressed")));
+            this.PaletaModoOscuro.ButtonSpecs.FormClose.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormClose.ImageStates.ImageTracking")));
+            this.PaletaModoOscuro.ButtonSpecs.FormMax.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormMax.Image")));
+            this.PaletaModoOscuro.ButtonSpecs.FormMax.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormMax.ImageStates.ImagePressed")));
+            this.PaletaModoOscuro.ButtonSpecs.FormMax.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormMax.ImageStates.ImageTracking")));
+            this.PaletaModoOscuro.ButtonSpecs.FormMin.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormMin.Image")));
+            this.PaletaModoOscuro.ButtonSpecs.FormMin.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormMin.ImageStates.ImagePressed")));
+            this.PaletaModoOscuro.ButtonSpecs.FormMin.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormMin.ImageStates.ImageTracking")));
+            this.PaletaModoOscuro.ButtonSpecs.FormRestore.Image = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormRestore.Image")));
+            this.PaletaModoOscuro.ButtonSpecs.FormRestore.ImageStates.ImagePressed = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormRestore.ImageStates.ImagePressed")));
+            this.PaletaModoOscuro.ButtonSpecs.FormRestore.ImageStates.ImageTracking = ((System.Drawing.Image)(resources.GetObject("PaletaModoOscuro.ButtonSpecs.FormRestore.ImageStates.ImageTracking")));
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.Black;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.Black;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoOscuro.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StatePressed.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StatePressed.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StatePressed.Border.Width = 0;
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoOscuro.ButtonStyles.ButtonFormClose.StateTracking.Border.Width = 0;
+            this.PaletaModoOscuro.Cargo.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.Cargo.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.Common.StateCommon.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.Common.StateCommon.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ControlStyles.ControlGroupBox.StateCommon.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ControlStyles.ControlGroupBox.StateCommon.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ControlStyles.ControlGroupBox.StateNormal.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.ControlStyles.ControlGroupBox.StateNormal.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoOscuro.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.PaletaModoOscuro.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
+            this.PaletaModoOscuro.GridStyles.GridCommon.StateCommon.Background.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.GridStyles.GridCommon.StateCommon.Background.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.GridStyles.GridCommon.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.PaletaModoOscuro.GridStyles.GridCommon.StateNormal.Background.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.GridStyles.GridCommon.StateNormal.Background.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.PaletaModoOscuro.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
+            this.PaletaModoOscuro.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
+            this.PaletaModoOscuro.InputControlStyles.InputControlStandalone.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.PaletaModoOscuro.InputControlStyles.InputControlStandalone.StateActive.Border.Rounding = 0;
+            this.PaletaModoOscuro.PanelStyles.PanelAlternate.StateCommon.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelAlternate.StateCommon.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelAlternate.StateNormal.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelAlternate.StateNormal.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelClient.StateCommon.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelClient.StateCommon.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelClient.StateNormal.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelClient.StateNormal.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCommon.StateCommon.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCommon.StateCommon.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCommon.StateNormal.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCommon.StateNormal.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCustom1.StateCommon.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCustom1.StateCommon.Color2 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCustom1.StateNormal.Color1 = System.Drawing.Color.DimGray;
+            this.PaletaModoOscuro.PanelStyles.PanelCustom1.StateNormal.Color2 = System.Drawing.Color.DimGray;
             // 
             // myScheduleDataSetBindingSource
             // 
@@ -362,493 +1785,130 @@ namespace MySchedule
             this.myScheduleDataSet.DataSetName = "MyScheduleDataSet";
             this.myScheduleDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // mnsSemana
-            // 
-            this.mnsSemana.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.mnsSemana.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.mnsSemana.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmLunes,
-            this.tsmMartes,
-            this.tsmMiércoles,
-            this.tsmJueves,
-            this.tsmViernes,
-            this.tsmSábado,
-            this.tsmDomingo});
-            this.mnsSemana.Location = new System.Drawing.Point(3, 18);
-            this.mnsSemana.Name = "mnsSemana";
-            this.mnsSemana.Size = new System.Drawing.Size(615, 28);
-            this.mnsSemana.TabIndex = 0;
-            this.mnsSemana.Text = "mnsSemana";
-            // 
-            // tsmLunes
-            // 
-            this.tsmLunes.Name = "tsmLunes";
-            this.tsmLunes.Size = new System.Drawing.Size(60, 24);
-            this.tsmLunes.Text = "Lunes";
-            // 
-            // tsmMartes
-            // 
-            this.tsmMartes.Name = "tsmMartes";
-            this.tsmMartes.Size = new System.Drawing.Size(68, 24);
-            this.tsmMartes.Text = "Martes";
-            // 
-            // tsmMiércoles
-            // 
-            this.tsmMiércoles.Name = "tsmMiércoles";
-            this.tsmMiércoles.Size = new System.Drawing.Size(87, 24);
-            this.tsmMiércoles.Text = "Miércoles";
-            // 
-            // tsmJueves
-            // 
-            this.tsmJueves.Name = "tsmJueves";
-            this.tsmJueves.Size = new System.Drawing.Size(65, 24);
-            this.tsmJueves.Text = "Jueves";
-            // 
-            // tsmViernes
-            // 
-            this.tsmViernes.Name = "tsmViernes";
-            this.tsmViernes.Size = new System.Drawing.Size(71, 24);
-            this.tsmViernes.Text = "Viernes";
-            // 
-            // tsmSábado
-            // 
-            this.tsmSábado.Name = "tsmSábado";
-            this.tsmSábado.Size = new System.Drawing.Size(74, 24);
-            this.tsmSábado.Text = "Sábado";
-            // 
-            // tsmDomingo
-            // 
-            this.tsmDomingo.Name = "tsmDomingo";
-            this.tsmDomingo.Size = new System.Drawing.Size(86, 24);
-            this.tsmDomingo.Text = "Domingo";
-            // 
-            // mnsHorario
-            // 
-            this.mnsHorario.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.mnsHorario.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.mnsHorario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmHorario1,
-            this.tsmHorario2,
-            this.tsmHorario3});
-            this.mnsHorario.Location = new System.Drawing.Point(3, 18);
-            this.mnsHorario.Name = "mnsHorario";
-            this.mnsHorario.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsHorario.Size = new System.Drawing.Size(621, 28);
-            this.mnsHorario.TabIndex = 0;
-            this.mnsHorario.Text = "Horario";
-            // 
-            // tsmHorario1
-            // 
-            this.tsmHorario1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.tsmHorario1.Name = "tsmHorario1";
-            this.tsmHorario1.Size = new System.Drawing.Size(86, 24);
-            this.tsmHorario1.Text = "Horario 1";
-            // 
-            // tsmHorario2
-            // 
-            this.tsmHorario2.BackColor = System.Drawing.SystemColors.Info;
-            this.tsmHorario2.Name = "tsmHorario2";
-            this.tsmHorario2.Size = new System.Drawing.Size(86, 24);
-            this.tsmHorario2.Text = "Horario 2";
-            // 
-            // tsmHorario3
-            // 
-            this.tsmHorario3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tsmHorario3.Name = "tsmHorario3";
-            this.tsmHorario3.Size = new System.Drawing.Size(86, 24);
-            this.tsmHorario3.Text = "Horario 3";
-            // 
-            // pnlCalendario
-            // 
-            this.pnlCalendario.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlCalendario.Controls.Add(this.gboxCalendario);
-            this.pnlCalendario.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pnlCalendario.Location = new System.Drawing.Point(746, 36);
-            this.pnlCalendario.Name = "pnlCalendario";
-            this.pnlCalendario.Size = new System.Drawing.Size(643, 361);
-            this.pnlCalendario.TabIndex = 23;
-            // 
-            // pnlUsuario
-            // 
-            this.pnlUsuario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pnlUsuario.Controls.Add(this.gboxUsuario);
-            this.pnlUsuario.Location = new System.Drawing.Point(113, 403);
-            this.pnlUsuario.Name = "pnlUsuario";
-            this.pnlUsuario.Size = new System.Drawing.Size(426, 270);
-            this.pnlUsuario.TabIndex = 24;
-            // 
-            // pnlDocente
-            // 
-            this.pnlDocente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlDocente.Controls.Add(this.gboxDocente);
-            this.pnlDocente.Location = new System.Drawing.Point(544, 403);
-            this.pnlDocente.Name = "pnlDocente";
-            this.pnlDocente.Size = new System.Drawing.Size(388, 270);
-            this.pnlDocente.TabIndex = 25;
-            // 
-            // pnlMateria
-            // 
-            this.pnlMateria.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.pnlMateria.Controls.Add(this.gboxMateria);
-            this.pnlMateria.Location = new System.Drawing.Point(938, 403);
-            this.pnlMateria.Name = "pnlMateria";
-            this.pnlMateria.Size = new System.Drawing.Size(451, 270);
-            this.pnlMateria.TabIndex = 26;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(35, 76);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 17);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(181, 73);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(170, 22);
-            this.txtNombre.TabIndex = 1;
-            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(35, 104);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(62, 17);
-            this.lblApellido.TabIndex = 2;
-            this.lblApellido.Text = "Apellido:";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Enabled = false;
-            this.txtApellido.Location = new System.Drawing.Point(181, 101);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.ReadOnly = true;
-            this.txtApellido.Size = new System.Drawing.Size(170, 22);
-            this.txtApellido.TabIndex = 3;
-            this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(35, 134);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(55, 17);
-            this.lblCorreo.TabIndex = 4;
-            this.lblCorreo.Text = "Correo:";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Enabled = false;
-            this.txtCorreo.Location = new System.Drawing.Point(181, 131);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.ReadOnly = true;
-            this.txtCorreo.Size = new System.Drawing.Size(170, 22);
-            this.txtCorreo.TabIndex = 5;
-            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
-            // 
-            // lblContraseña
-            // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(35, 164);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(85, 17);
-            this.lblContraseña.TabIndex = 6;
-            this.lblContraseña.Text = "Contraseña:";
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Enabled = false;
-            this.txtContraseña.Location = new System.Drawing.Point(181, 161);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '●';
-            this.txtContraseña.ReadOnly = true;
-            this.txtContraseña.Size = new System.Drawing.Size(170, 22);
-            this.txtContraseña.TabIndex = 7;
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
-            // 
-            // cmdEditarNombre
-            // 
-            this.cmdEditarNombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdEditarNombre.BackgroundImage")));
-            this.cmdEditarNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdEditarNombre.Location = new System.Drawing.Point(357, 73);
-            this.cmdEditarNombre.Name = "cmdEditarNombre";
-            this.cmdEditarNombre.Size = new System.Drawing.Size(23, 22);
-            this.cmdEditarNombre.TabIndex = 8;
-            this.cmdEditarNombre.UseVisualStyleBackColor = true;
-            this.cmdEditarNombre.Click += new System.EventHandler(this.cmdEditarNombre_Click);
-            // 
-            // cmdEditarApellido
-            // 
-            this.cmdEditarApellido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdEditarApellido.BackgroundImage")));
-            this.cmdEditarApellido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdEditarApellido.Location = new System.Drawing.Point(357, 101);
-            this.cmdEditarApellido.Name = "cmdEditarApellido";
-            this.cmdEditarApellido.Size = new System.Drawing.Size(23, 22);
-            this.cmdEditarApellido.TabIndex = 9;
-            this.cmdEditarApellido.UseVisualStyleBackColor = true;
-            this.cmdEditarApellido.Click += new System.EventHandler(this.cmdEditarApellido_Click);
-            // 
-            // cmdEditarCorreo
-            // 
-            this.cmdEditarCorreo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdEditarCorreo.BackgroundImage")));
-            this.cmdEditarCorreo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdEditarCorreo.Location = new System.Drawing.Point(357, 129);
-            this.cmdEditarCorreo.Name = "cmdEditarCorreo";
-            this.cmdEditarCorreo.Size = new System.Drawing.Size(23, 22);
-            this.cmdEditarCorreo.TabIndex = 10;
-            this.cmdEditarCorreo.UseVisualStyleBackColor = true;
-            this.cmdEditarCorreo.Click += new System.EventHandler(this.cmdEditarCorreo_Click);
-            // 
-            // cmdEditarContraseña
-            // 
-            this.cmdEditarContraseña.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdEditarContraseña.BackgroundImage")));
-            this.cmdEditarContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdEditarContraseña.Location = new System.Drawing.Point(357, 161);
-            this.cmdEditarContraseña.Name = "cmdEditarContraseña";
-            this.cmdEditarContraseña.Size = new System.Drawing.Size(23, 22);
-            this.cmdEditarContraseña.TabIndex = 11;
-            this.cmdEditarContraseña.UseVisualStyleBackColor = true;
-            this.cmdEditarContraseña.Click += new System.EventHandler(this.cmdEditarContraseña_Click);
-            // 
-            // dgvDocente
-            // 
-            this.dgvDocente.AutoGenerateColumns = false;
-            this.dgvDocente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocente.DataSource = this.myScheduleDataSetBindingSource;
-            this.dgvDocente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDocente.Location = new System.Drawing.Point(3, 18);
-            this.dgvDocente.Name = "dgvDocente";
-            this.dgvDocente.RowHeadersWidth = 51;
-            this.dgvDocente.RowTemplate.Height = 24;
-            this.dgvDocente.Size = new System.Drawing.Size(382, 249);
-            this.dgvDocente.TabIndex = 0;
-            // 
-            // gboxDocente
-            // 
-            this.gboxDocente.Controls.Add(this.dgvDocente);
-            this.gboxDocente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gboxDocente.Location = new System.Drawing.Point(0, 0);
-            this.gboxDocente.Name = "gboxDocente";
-            this.gboxDocente.Size = new System.Drawing.Size(388, 270);
-            this.gboxDocente.TabIndex = 1;
-            this.gboxDocente.TabStop = false;
-            this.gboxDocente.Text = "Docente";
-            // 
-            // gboxMateria
-            // 
-            this.gboxMateria.BackColor = System.Drawing.SystemColors.Info;
-            this.gboxMateria.Controls.Add(this.dgvMateria);
-            this.gboxMateria.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gboxMateria.Location = new System.Drawing.Point(0, 0);
-            this.gboxMateria.Name = "gboxMateria";
-            this.gboxMateria.Size = new System.Drawing.Size(451, 270);
-            this.gboxMateria.TabIndex = 0;
-            this.gboxMateria.TabStop = false;
-            this.gboxMateria.Text = "Materia";
-            // 
-            // dgvMateria
-            // 
-            this.dgvMateria.AutoGenerateColumns = false;
-            this.dgvMateria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMateria.DataSource = this.myScheduleDataSetBindingSource;
-            this.dgvMateria.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMateria.Location = new System.Drawing.Point(3, 18);
-            this.dgvMateria.Name = "dgvMateria";
-            this.dgvMateria.RowHeadersWidth = 51;
-            this.dgvMateria.RowTemplate.Height = 24;
-            this.dgvMateria.Size = new System.Drawing.Size(445, 249);
-            this.dgvMateria.TabIndex = 0;
-            // 
-            // pboxMultitarea
-            // 
-            this.pboxMultitarea.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxMultitarea.Image = ((System.Drawing.Image)(resources.GetObject("pboxMultitarea.Image")));
-            this.pboxMultitarea.Location = new System.Drawing.Point(7, 568);
-            this.pboxMultitarea.Name = "pboxMultitarea";
-            this.pboxMultitarea.Size = new System.Drawing.Size(100, 76);
-            this.pboxMultitarea.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxMultitarea.TabIndex = 10;
-            this.pboxMultitarea.TabStop = false;
-            this.pboxMultitarea.Click += new System.EventHandler(this.pboxMultitarea_Click);
-            // 
-            // lblMultitarea
-            // 
-            this.lblMultitarea.AutoSize = true;
-            this.lblMultitarea.Location = new System.Drawing.Point(21, 647);
-            this.lblMultitarea.Name = "lblMultitarea";
-            this.lblMultitarea.Size = new System.Drawing.Size(70, 17);
-            this.lblMultitarea.TabIndex = 11;
-            this.lblMultitarea.Text = "Multitarea";
-            // 
-            // gboxCalendario
-            // 
-            this.gboxCalendario.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.gboxCalendario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gboxCalendario.Location = new System.Drawing.Point(0, 0);
-            this.gboxCalendario.Name = "gboxCalendario";
-            this.gboxCalendario.Size = new System.Drawing.Size(643, 361);
-            this.gboxCalendario.TabIndex = 0;
-            this.gboxCalendario.TabStop = false;
-            this.gboxCalendario.Text = "Calendario";
-            // 
-            // gboxUsuario
-            // 
-            this.gboxUsuario.Controls.Add(this.pboxCerrarSesión);
-            this.gboxUsuario.Controls.Add(this.cmdEditarContraseña);
-            this.gboxUsuario.Controls.Add(this.txtCorreo);
-            this.gboxUsuario.Controls.Add(this.cmdEditarCorreo);
-            this.gboxUsuario.Controls.Add(this.lblNombre);
-            this.gboxUsuario.Controls.Add(this.cmdEditarApellido);
-            this.gboxUsuario.Controls.Add(this.txtNombre);
-            this.gboxUsuario.Controls.Add(this.cmdEditarNombre);
-            this.gboxUsuario.Controls.Add(this.lblApellido);
-            this.gboxUsuario.Controls.Add(this.txtContraseña);
-            this.gboxUsuario.Controls.Add(this.txtApellido);
-            this.gboxUsuario.Controls.Add(this.lblContraseña);
-            this.gboxUsuario.Controls.Add(this.lblCorreo);
-            this.gboxUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gboxUsuario.Location = new System.Drawing.Point(0, 0);
-            this.gboxUsuario.Name = "gboxUsuario";
-            this.gboxUsuario.Size = new System.Drawing.Size(426, 270);
-            this.gboxUsuario.TabIndex = 10;
-            this.gboxUsuario.TabStop = false;
-            this.gboxUsuario.Text = "Usuario";
-            // 
-            // pboxCerrarSesión
-            // 
-            this.pboxCerrarSesión.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxCerrarSesión.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pboxCerrarSesión.Image = ((System.Drawing.Image)(resources.GetObject("pboxCerrarSesión.Image")));
-            this.pboxCerrarSesión.Location = new System.Drawing.Point(3, 217);
-            this.pboxCerrarSesión.Name = "pboxCerrarSesión";
-            this.pboxCerrarSesión.Size = new System.Drawing.Size(420, 50);
-            this.pboxCerrarSesión.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxCerrarSesión.TabIndex = 10;
-            this.pboxCerrarSesión.TabStop = false;
-            this.pboxCerrarSesión.Click += new System.EventHandler(this.pboxCerrarSesión_Click);
-            // 
             // FrmHorario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1389, 673);
-            this.Controls.Add(this.pnlDocente);
-            this.Controls.Add(this.pnlMateria);
-            this.Controls.Add(this.pnlUsuario);
-            this.Controls.Add(this.pnlCalendario);
-            this.Controls.Add(this.pnlHorario);
-            this.Controls.Add(this.pnlEncabezado);
-            this.Controls.Add(this.gboxMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.mnsHorario;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ClientSize = new System.Drawing.Size(1233, 558);
+            this.Controls.Add(this.kpnlFullDock);
+            this.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmHorario";
+            this.Palette = this.PaletaModoClaro;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmHorario";
-            this.gboxMenu.ResumeLayout(false);
-            this.gboxMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxMateria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxDocente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxCalendario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxHorario)).EndInit();
-            this.pnlEncabezado.ResumeLayout(false);
-            this.pnlEncabezado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxCerrar)).EndInit();
-            this.pnlHorario.ResumeLayout(false);
-            this.gboxHorario.ResumeLayout(false);
-            this.gboxHorario.PerformLayout();
-            this.gboxSemana.ResumeLayout(false);
-            this.gboxSemana.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).EndInit();
+            this.Text = "MySchedule - Horario";
+            this.Load += new System.EventHandler(this.FrmHorario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlFullDock)).EndInit();
+            this.kpnlFullDock.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlMenu)).EndInit();
+            this.kpnlMenu.ResumeLayout(false);
+            this.kpnlMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlContenido)).EndInit();
+            this.kpnlContenido.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlDocente)).EndInit();
+            this.kpnlDocente.ResumeLayout(false);
+            this.kpnlDocente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxDocente.Panel)).EndInit();
+            this.kgboxDocente.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxDocente)).EndInit();
+            this.kgboxDocente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kdgvDocente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlHorario)).EndInit();
+            this.kpnlHorario.ResumeLayout(false);
+            this.kpnlHorario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxHorario.Panel)).EndInit();
+            this.kgboxHorario.Panel.ResumeLayout(false);
+            this.kgboxHorario.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxHorario)).EndInit();
+            this.kgboxHorario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxSemana.Panel)).EndInit();
+            this.kgboxSemana.Panel.ResumeLayout(false);
+            this.kgboxSemana.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxSemana)).EndInit();
+            this.kgboxSemana.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kdgvHorario)).EndInit();
+            this.kmnsSemana.ResumeLayout(false);
+            this.kmnsSemana.PerformLayout();
+            this.kmnsHorario.ResumeLayout(false);
+            this.kmnsHorario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlMateria)).EndInit();
+            this.kpnlMateria.ResumeLayout(false);
+            this.kpnlMateria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxMateria.Panel)).EndInit();
+            this.kgboxMateria.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxMateria)).EndInit();
+            this.kgboxMateria.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kdgvMateria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlUsuario)).EndInit();
+            this.kpnlUsuario.ResumeLayout(false);
+            this.kpnlUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxUsuario.Panel)).EndInit();
+            this.kgboxUsuario.Panel.ResumeLayout(false);
+            this.kgboxUsuario.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgboxUsuario)).EndInit();
+            this.kgboxUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.myScheduleDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myScheduleDataSet)).EndInit();
-            this.mnsSemana.ResumeLayout(false);
-            this.mnsSemana.PerformLayout();
-            this.mnsHorario.ResumeLayout(false);
-            this.mnsHorario.PerformLayout();
-            this.pnlCalendario.ResumeLayout(false);
-            this.pnlUsuario.ResumeLayout(false);
-            this.pnlDocente.ResumeLayout(false);
-            this.pnlMateria.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).EndInit();
-            this.gboxDocente.ResumeLayout(false);
-            this.gboxMateria.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMateria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxMultitarea)).EndInit();
-            this.gboxUsuario.ResumeLayout(false);
-            this.gboxUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxCerrarSesión)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gboxMenu;
-        private System.Windows.Forms.PictureBox pboxHorario;
-        private System.Windows.Forms.Panel pnlEncabezado;
-        private System.Windows.Forms.Panel pnlHorario;
-        private System.Windows.Forms.PictureBox pboxCalendario;
-        private System.Windows.Forms.Label lblHorario;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.PictureBox pboxUsuario;
-        private System.Windows.Forms.Label lblCalendario;
-        private System.Windows.Forms.Label lblMaterias;
-        private System.Windows.Forms.PictureBox pboxMateria;
-        private System.Windows.Forms.Label lblDocente;
-        private System.Windows.Forms.PictureBox pboxDocente;
-        private System.Windows.Forms.GroupBox gboxHorario;
-        private System.Windows.Forms.GroupBox gboxSemana;
-        private System.Windows.Forms.MenuStrip mnsSemana;
-        private System.Windows.Forms.ToolStripMenuItem tsmLunes;
-        private System.Windows.Forms.ToolStripMenuItem tsmMartes;
-        private System.Windows.Forms.ToolStripMenuItem tsmMiércoles;
-        private System.Windows.Forms.ToolStripMenuItem tsmJueves;
-        private System.Windows.Forms.ToolStripMenuItem tsmViernes;
-        private System.Windows.Forms.ToolStripMenuItem tsmSábado;
-        private System.Windows.Forms.ToolStripMenuItem tsmDomingo;
-        private System.Windows.Forms.MenuStrip mnsHorario;
-        private System.Windows.Forms.ToolStripMenuItem tsmHorario1;
-        private System.Windows.Forms.ToolStripMenuItem tsmHorario2;
-        private System.Windows.Forms.ToolStripMenuItem tsmHorario3;
         private System.Windows.Forms.BindingSource myScheduleDataSetBindingSource;
         private MyScheduleDataSet myScheduleDataSet;
-        private System.Windows.Forms.PictureBox pboxMinimizar;
-        private System.Windows.Forms.PictureBox pboxCerrar;
-        private System.Windows.Forms.DataGridView dgvHorario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columna_Hora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaMateria;
-        private System.Windows.Forms.Panel pnlCalendario;
-        private System.Windows.Forms.Panel pnlUsuario;
-        private System.Windows.Forms.Panel pnlDocente;
-        private System.Windows.Forms.Panel pnlMateria;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Button cmdEditarContraseña;
-        private System.Windows.Forms.Button cmdEditarCorreo;
-        private System.Windows.Forms.Button cmdEditarApellido;
-        private System.Windows.Forms.Button cmdEditarNombre;
-        private System.Windows.Forms.GroupBox gboxDocente;
-        private System.Windows.Forms.DataGridView dgvDocente;
-        private System.Windows.Forms.GroupBox gboxMateria;
-        private System.Windows.Forms.DataGridView dgvMateria;
-        private System.Windows.Forms.Label lblMultitarea;
-        private System.Windows.Forms.PictureBox pboxMultitarea;
-        private System.Windows.Forms.GroupBox gboxCalendario;
-        private System.Windows.Forms.GroupBox gboxUsuario;
-        private System.Windows.Forms.PictureBox pboxCerrarSesión;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette PaletaModoClaro;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlFullDock;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdUsuario;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdMenuCerrar;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdCerrarSesion;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdDocente;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdMateria;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdMenuAbrir;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdHorario;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdMultitarea;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlContenido;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kgboxHorario;
+        private System.Windows.Forms.MenuStrip kmnsHorario;
+        private System.Windows.Forms.ToolStripMenuItem ktsmHorario1;
+        private System.Windows.Forms.ToolStripMenuItem ktsmHorario2;
+        private System.Windows.Forms.ToolStripMenuItem ktsmHorario3;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kgboxSemana;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kdgvHorario;
+        private System.Windows.Forms.MenuStrip kmnsSemana;
+        private System.Windows.Forms.ToolStripMenuItem ktsmLunes;
+        private System.Windows.Forms.ToolStripMenuItem ktsmMartes;
+        private System.Windows.Forms.ToolStripMenuItem ktsmMiércoles;
+        private System.Windows.Forms.ToolStripMenuItem ktsmJueves;
+        private System.Windows.Forms.ToolStripMenuItem ktsmViernes;
+        private System.Windows.Forms.ToolStripMenuItem ktsmSábado;
+        private System.Windows.Forms.ToolStripMenuItem ktsmDomingo;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlHorario;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlMateria;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kgboxMateria;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kdgvMateria;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlDocente;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kgboxDocente;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kdgvDocente;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdAgregarDocente;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlUsuario;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kgboxUsuario;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox ktxtNombre;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdEditarContraseña;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdEditarApellido;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdEditarCorreo;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kcmdEditarNombre;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox ktxtContraseña;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox ktxtApellido;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox ktxtCorreo;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette PaletaModoOscuro;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kchkbModoClaroOscuro;
     }
 }
